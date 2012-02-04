@@ -4,60 +4,58 @@
 
 @import "blueprint";
 @import "blueprint/colors";
-@import "compass/css3/border-radius";
+@import "compass/css3";
 
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 //@include blueprint;
 
-$heading-font-family: 'KelmscottRomanRegular', Helvetica, Arial, sans-serif;
-
-@mixin content-block {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.6);
-  margin-top: $blueprint-grid-margin;
-  padding: 0.5 * $blueprint-grid-margin;
-  @include border-radius;
-  border: 2px solid #5c2010;
-}
+// setup
 
 body.bp {
   @include blueprint-typography(true);
   @include blueprint-utilities;
 }
 
+// layout
+
 body.two-col {
-  background: url('../images/1336.png') #000;
-  $content-columns: 17;
-  $sidebar-columns: 24 - 3 - $content-columns;
+  $content-columns: 19;
+  $sidebar-columns: $blueprint-grid-columns - $content-columns;
   #container {
     @include container;
-    margin-top: 4*$blueprint-grid-margin;
-    background: url('../images/skyline.jpg') #015;
-    min-height: 517px;
-    @include border-radius(10px);
   }
   #header, #footer {
-    @include column($blueprint-grid-columns - 2);
-    @include push(1);
-    color: $header-color;
-    @include content-block;
-  }
-  #header h1 {
-    margin-bottom: 0;
-    font-family: $heading-font-family;
+    @include column($content-columns + $sidebar-columns);
   }
   #sidebar {
     @include column($sidebar-columns);
-    @include content-block;
-    @include push(1);
   }
   #content {
-    // true means it's the last column in the row
-    @include column($content-columns);
-    @include content-block;
-    @include push(2);
-    position: relative;
-    left: -4px;
+    @include column($content-columns, true);
   }
+}
+
+// presentation
+
+body {
+  background: url('../images/1336.png') #000;
+}
+
+#container {
+  background: url('../images/skyline.jpg') #015;
+  min-height: 500px;
+  @include border-radius(10px);
+  @include single-box-shadow(rgba(255, 255, 255, 0.75), 0px, 0px, 5px);
+}
+
+header,
+footer,
+nav,
+section {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
+  @include border-radius;
+  border: 2px solid #5c2010;
+  @include box-sizing(border-box);
 }
