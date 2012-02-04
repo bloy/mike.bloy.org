@@ -6,30 +6,31 @@
 @import "blueprint/colors";
 @import "compass/css3";
 
-// To generate css equivalent to the blueprint css but with your
-// configuration applied, uncomment:
-//@include blueprint;
-
 // setup
 
-body.bp {
-  @include blueprint-typography(true);
-  @include blueprint-utilities;
-}
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+@include blueprint;
 
 // layout
 
 body.two-col {
-  $content-columns: 19;
-  $sidebar-columns: $blueprint-grid-columns - $content-columns;
+  $content-columns: 18;
+  $sidebar-columns: $blueprint-grid-columns - 2 - $content-columns;
   #container {
     @include container;
+    margin-top: $blueprint-grid-margin;
   }
   #header, #footer {
     @include column($content-columns + $sidebar-columns);
+    @include prepend(1);
+  }
+  #header {
+    margin-top: $blueprint-grid-width;
   }
   #sidebar {
     @include column($sidebar-columns);
+    @include prepend(1);
   }
   #content {
     @include column($content-columns, true);
@@ -54,8 +55,14 @@ footer,
 nav,
 section {
   background: #fff;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   @include border-radius;
   border: 2px solid #5c2010;
   @include box-sizing(border-box);
+  padding: $blueprint-grid-margin / 2;
+  margin-bottom: $blueprint-grid-margin;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
 }
