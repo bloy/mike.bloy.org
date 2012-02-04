@@ -54,13 +54,24 @@ header,
 footer,
 nav,
 section {
-  background: #fff;
+  background: #b5b9cb;
   background: rgba(255, 255, 255, 0.7);
   @include border-radius;
   border: 2px solid #5c2010;
   @include box-sizing(border-box);
   padding: $blueprint-grid-margin / 2;
   margin-bottom: $blueprint-grid-margin;
+  & *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
