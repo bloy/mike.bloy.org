@@ -5,12 +5,20 @@
 @import "blueprint";
 @import "blueprint/colors";
 @import "compass/css3";
+@import "compass/utilities/sprites";
 
 // setup
 
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 @include blueprint;
+
+// sprites
+
+$disable-magic-selectors: true;
+
+@import "icon/*.png"; /**/
+@include all-icon-sprites;
 
 // layout
 
@@ -19,6 +27,7 @@ body.two-col {
   $sidebar-columns: $blueprint-grid-columns - 2 - $content-columns;
   #container {
     @include container;
+
     margin-top: $blueprint-grid-margin;
   }
   #header, #footer {
@@ -73,6 +82,25 @@ nav a {
     text-decoration: underline;
   }
 }
+
+nav#links ul {
+  list-style: none;
+  padding-left: 0;
+  & li:before {
+    margin-right: 5px;
+    content: " ";
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: none;
+  }
+}
+li#email:before { @include icon-sprite(email); }
+li#gplus:before { @include icon-sprite(gplus); }
+li#facebook:before { @include icon-sprite(facebook); }
+li#linkedin:before { @include icon-sprite(linkedin); }
+li#twitter:before { @include icon-sprite(twitter); }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
