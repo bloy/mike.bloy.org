@@ -37,6 +37,9 @@ body.two-col {
   #header {
     margin-top: $blueprint-grid-width;
   }
+  #footer {
+    margin-bottom: $blueprint-grid-width;
+  }
   #sidebar {
     @include column($sidebar-columns);
     @include prepend(1);
@@ -53,7 +56,7 @@ body {
 }
 
 #container {
-  background: url('../images/skyline.jpg') #015;
+  background: url('../images/skyline.jpg') #000 no-repeat;
   min-height: 500px;
   @include border-radius(10px);
   @include single-box-shadow(rgba(255, 255, 255, 0.75), 0px, 0px, 5px);
