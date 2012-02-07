@@ -59,7 +59,7 @@ body {
   background: url('../images/skyline.jpg') #000 no-repeat;
   min-height: 500px;
   @include border-radius(10px);
-  @include single-box-shadow(rgba(255, 255, 255, 0.75), 0px, 0px, 5px);
+  border: 1px solid #181818;
 }
 
 header,
@@ -76,6 +76,11 @@ section {
   & *:last-child {
     margin-bottom: 0;
   }
+}
+
+header h1 {
+  position: relative;
+  top: -5px;
 }
 
 nav a {
