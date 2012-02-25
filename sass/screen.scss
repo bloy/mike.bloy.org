@@ -110,6 +110,7 @@ nav#links ul {
   }
 }
 li#email:before { @include icon-sprite(email); }
+li#github:before { @include icon-sprite(github); }
 li#gplus:before { @include icon-sprite(gplus); }
 li#facebook:before { @include icon-sprite(facebook); }
 li#linkedin:before { @include icon-sprite(linkedin); }
