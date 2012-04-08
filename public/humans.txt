@@ -1,0 +1,24 @@
+/* colophon */
+/* humanstxt.org */
+
+/* TEAM */
+
+  Chief Cook and Bottle Washer: Mike Bloy
+  Contact: mike at a domain called bloy.org
+  Site: http://mike.bloy.org
+
+/* THANKS */
+
+  Wife: Kirstin Bloy
+
+  Design Assistance: Tracy Harris
+
+  Photo Awesomeness: Madison, WI, skyline
+
+/* SITE */
+
+  Last update: 11-Mar-2012
+  Language: English
+  Doctype: HTML5
+  Standards: HTML5/CSS3
+  Software: Vim, Gimp, Git, Linux
