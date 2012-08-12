@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Mike Bloy</title>
+    <title>Mike Bloy<%= extra_title %></title>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -24,7 +24,7 @@
   </head>
   <body class="bp two-col">
     <div id="container">
-      <div id="header"><header><h1>Mike Bloy</h1></header></div>
+      <div id="header"><header><h1>Mike Bloy<%= extra_title %></h1></header></div>
       <div id="sidebar">
         <nav id="contentlinks">
         <ul>
@@ -57,7 +57,9 @@
         </nav>
       </div>
       <div id="content">
-        <%= yield %>
+        <section class="minipage">
+          <%= yield %>
+        </section>
       </div>
       <div id="footer">
         <footer>
