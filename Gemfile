@@ -4,3 +4,5 @@ source :gemcutter
 gem 'capistrano'
 gem 'bcdatabase'
 gem 'compass'
+gem 'middleman'
+gem 'therubyracer'
