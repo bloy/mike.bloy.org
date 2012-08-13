@@ -79,7 +79,8 @@ configure :build do
   # Enable cache buster
   activate :cache_buster
 
-  activate :directory_indexes
+  #activate :directory_indexes
+
   # Use relative URLs
   # activate :relative_assets
 

@@ -8,8 +8,9 @@ set :repository, config['repository']
 set :branch, config['branch'] if config['branch']
 set :use_sudo, false
 set :deploy_to, config['deploy_to']
-set :deploy_via, "copy"
-set :copy_exclude, [".git"]
+set :deploy_via, :copy
+set :copy_exclude, ".git/*"
+set :build_script, "bundle install; bundle exec middleman build -c; mv build public"
 set :scm, :git
 
 role :web, location
@@ -22,10 +23,6 @@ namespace :deploy do
 
   task :migrate do
     puts "no migrations"
-  end
-
-  task :finalize_update do
-    run "cd #{latest_release} && bundle exec compass compile --output-style compressed"
   end
 
   task :start do
