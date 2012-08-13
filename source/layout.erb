@@ -17,8 +17,7 @@
     <%= stylesheet_link_tag 'ie' %>
     <![endif]-->
     <%= javascript_include_tag 'site' %>
-    <%= javascript_include_tag 'gaq' %>
-    <script src="/javascripts/site.js"></script>
+    <%# javascript_include_tag 'gaq' %>
     <script type="text/javascript">
     </script>
   </head>
@@ -28,10 +27,10 @@
       <div id="sidebar">
         <nav id="contentlinks">
         <ul>
-          <li><%= link_to "Intro", "index" %></li>
-          <li><%= link_to "Professional", "professional" %></li>
-          <li><%= link_to "Personal", "personal" %></li>
-          <li><%= link_to "Credits", "credits" %></li>
+          <li><%= link_to "Intro", "/" %></li>
+          <li><%= link_to "Professional", "/professional.html" %></li>
+          <li><%= link_to "Personal", "/personal.html" %></li>
+          <li><%= link_to "Credits", "/credits.html" %></li>
           <%# TODO: resume? %>
         </ul>
         </nav>
