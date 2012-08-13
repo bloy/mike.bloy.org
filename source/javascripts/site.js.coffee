@@ -19,7 +19,6 @@ page_transition = (ev) ->
     switch_to_page(id)
 
 switch_to_page = (id) ->
-  console.log("switch to page #{id}")
   $('#content section.minipage').hide().removeAttr('data-selected')
   $("##{id}").fadeIn().attr('data-selected', true)
 
@@ -43,5 +42,4 @@ $(document).ready () ->
   if !!(window.history && history.pushState)
     window.addEventListener "popstate", (e) ->
       id = id_from_path(normalize_path(location.pathname))
-      console.log("popevent to #{id}")
-      switch_to_page(id)
+      switch_to_page(id) unless id == current_page()
