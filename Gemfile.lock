@@ -99,7 +99,6 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
-    railsless-deploy (1.0.2)
     rb-fchange (0.0.5)
       ffi
     rb-fsevent (0.9.1)
@@ -141,5 +140,4 @@ DEPENDENCIES
   capistrano
   compass
   middleman
-  railsless-deploy
   therubyracer
