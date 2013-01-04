@@ -1,7 +1,9 @@
 normalize_path = (path) ->
   path += '/' unless path.match(/(\/|.html)$/)
   path += 'index.html' if path.match(/\/$/)
-  path.replace window.location.origin, ""
+  origin = window.location.protocol + "//" + window.location.host
+  path = path.replace origin, ""
+  path
 
 id_from_path = (path) ->
   id = path.replace('.html', '').replace('/', '_')
