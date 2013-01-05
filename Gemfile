@@ -3,6 +3,7 @@ source :gemcutter
 
 gem 'bcdatabase'
 gem 'capistrano'
+gem 'susy'
 gem 'compass'
 gem 'middleman'
 gem 'rb-inotify', '~> 0.8.8'
