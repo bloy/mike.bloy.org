@@ -116,6 +116,11 @@ li#facebook:before { @include icon-sprite(facebook); }
 li#linkedin:before { @include icon-sprite(linkedin); }
 li#twitter:before { @include icon-sprite(twitter); }
 li#stackexchange:before { @include icon-sprite(stackexchange); }
+li#resume:before {
+  @include icon-sprite(resume);
+  position: relative;
+  left: 2px;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
