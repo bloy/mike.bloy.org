@@ -1,0 +1,160 @@
+skills:
+  - section: Programming Languages & Frameworks
+    skills:
+      - "Ruby"
+      - "Rails"
+      - "Javascript"
+      - "JQuery"
+      - "Java (JEE, JSP, EJB, Servlets)"
+      - "Python"
+      - "PHP"
+      - "SQL"
+
+  - section: Presentation Languages
+    skills:
+      - "HTML"
+      - "CSS"
+      - "XML"
+      - "LaTeX"
+
+  - section: Operating Systems
+    skills:
+      - "Linux (Debian, Redhat, Arch)"
+      - "Windows 7"
+      - "OSX"
+      - "Windows XP"
+
+  - section: Protocols & Communication
+    skills:
+      - "HTTP"
+      - "CGI"
+      - "SSL"
+      - "IMAP"
+      - "POP"
+      - "SMTP"
+      - "LDAP"
+      - "Samba/CIFS"
+      - "DNS"
+      - "DHCP"
+      - "SSH"
+
+  - section: Software
+    skills:
+      - "Vim"
+      - "Subversion"
+      - "Git"
+      - "MySQL"
+      - "PostgresSQL"
+      - "Oracle"
+      - "Apache"
+      - "Nginx"
+      - "Postfix"
+      - "Mailman"
+      - "Drupal"
+      - "Eclipse"
+      - "Ant"
+      - "Maven"
+      - "Jenkins"
+      - "Archiva"
+      - "Jira"
+      - "Confluence"
+
+jobs:
+  - id: alice
+    name: Alice
+    when:
+      start: 2011
+      end: present
+    where: Middleton, WI
+    title: Developer
+    duties:
+      - Ruby, Rails, and Sinatra web development for alice.com and related websites
+      - Business logic and domain space development in Ruby and Java
+      - Mobile (iOS/Android) app development using Cordova/Phonegap
+      - Created combined codebase for alice.com and alice.es with developers from the Spain and Madison offices
+      - Communicate with remote developers via appropriate technologies, including IRC chat, issue tracking software, email, and google hangouts
+
+  - id: tds
+    name: TDS Telecom
+    when:
+      start: 2006
+      end: 2011
+    where: Madison, WI
+    title: Sr. Software Developer
+    duties:
+      - Maintain and enhance applications in support of enterprise Internet services
+      - Coordinate and oversee development of Java, EJB and Web-based telecom provisioning application, with front-ends facing internal and external users
+      - Integration of billing, hardware provisioning, shipping, and availability systems
+      - Act as subject matter expert on above systems; Gather requirements from and provide estimates to business units
+      - Maintain Hudson continuous integration
+      - Maintain Maven and Ant-based build systems
+      - Maintain Confluence wiki
+      - Maintain JIRA issue-tracking system.
+
+  - id: altruist
+    name: Altruist Media
+    when:
+      start: 2001
+      end: 2006
+    where: Arlington, VA
+    title: New Media Manager/System Administrator/Programmer
+    duties:
+      - Administer and monitor network with Windows, Linux, and Mac clients and servers
+      - Create multimedia applications for web, DVD video, DVD-ROM, CD-ROM, and presentations using LAMP, Flash, and other appropriate technologies.
+      - Create database-driven web applications to client specifications.
+      - Administer and update client websites, databases, and mailing lists.
+      - Draft proposals, budgets, and responses to RFPs
+      - Review and recommend hardware and software for company use
+      - Assign and track system administration, programming, and multimedia projects
+      - Become expert in standards-based, accessible web development
+
+  - id: aaas
+    name: American Association for the Advancement of Science
+    when:
+      start: 2000
+      end: 2001
+    where: Washington, DC
+    title: Technology Specialist
+    duties:
+      - Coordinate with graphics design team, outside consultants, and in-house staff to design redesigned website.
+      - Administer database, web server, and legacy Perl code for preexisting website.
+      - Develop PHP-based redesigned website.
+      - Translate design team’s templates into HTML/CSS for use in dynamic website.
+      - Work with hosting consultants to launch redesigned website with no loss of service and planning for emergency rollback.
+
+  - id: csl
+    name: UW-Madison - Computer Science Lab
+    when:
+      start: 1998
+      end: 2000
+    where: Madison, WI
+    title: Webmaster, System Administrator/Programmer
+    duties:
+      - Administer computer-science department’s Apache/Solaris web servers.
+      - Implement Apache+PHP solution for department web sites.
+      - End-user support for UNIX and Windows NT instructional and research computers, including orientation classes for new UNIX users.
+      - Software installation and maintenance.
+      - Maintain software security while not affecting instructional use.
+
+education:
+  - id: bswiscedu
+    degree: BS, Computer Science
+    where: University of Wisconsin - Madison
+    extra:
+      - Supplemented coursework with self-study and work on open-source projects
+      - Graduated, May 2000
+
+links:
+  - section: Professional Social Networking
+    links:
+      - http://www.linkedin.com/in/mikebloy
+      - http://github.com/bloy
+      - http://stackoverflow.com/users/1247517/bloy?tab=answers
+      - http://superuser.com/users/121265/bloy?tab=answers
+  - section: Significant Work
+    links:
+      - http://mike.bloy.org
+      - http://reeseenvcons.com
+      - http://www.alice.com
+      - http://www.alice.es
+      - http://www.eurekalert.org
