@@ -94,7 +94,11 @@
           <h3><%= escape_html section.section %></h3>
           <ul>
             <% section.links.each do |link| %>
-              <li><%= link_to escape_html(link), link %></li>
+              <% if link["text"] %>
+                <li><%= link_to escape_html(link.text), link.url %></li>
+              <% else %>
+                <li><%= link_to escape_html(link), link %></li>
+              <% end %>
             <% end %>
           </ul>
         </section>

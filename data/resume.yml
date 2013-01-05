@@ -147,10 +147,16 @@ education:
 links:
   - section: Professional Social Networking
     links:
-      - http://www.linkedin.com/in/mikebloy
-      - http://github.com/bloy
-      - http://stackoverflow.com/users/1247517/bloy?tab=answers
-      - http://superuser.com/users/121265/bloy?tab=answers
+      - text: LinkedIn
+        url: http://www.linkedin.com/in/mikebloy
+      - text: GitHub
+        url: http://github.com/bloy
+      - text: Stack Overflow
+        url: http://stackoverflow.com/users/1247517/bloy?tab=answers
+      - text: SuperUser
+        url: http://superuser.com/users/121265/bloy?tab=answers
+      - text: Coderwall
+        url: https://coderwall.com/bloy
   - section: Significant Work
     links:
       - http://mike.bloy.org
