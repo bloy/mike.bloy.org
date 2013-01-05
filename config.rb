@@ -4,7 +4,7 @@
 
 # Susy grids in Compass
 # First: gem install compass-susy-plugin
-# require 'susy'
+require 'susy'
 
 # Change Compass configuration
 compass_config do |config|
@@ -33,7 +33,7 @@ activate :automatic_image_sizes
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+page "/resume.html", :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
