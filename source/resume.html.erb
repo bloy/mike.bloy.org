@@ -44,74 +44,82 @@
 
     <section id="skills">
       <h2>Skills</h2>
-      <% data.resume.skills.each do |skillset| %>
-        <div class="skillset">
-          <h3><%= escape_html skillset.section %></h3>
-          <ul class="skillset">
-            <% skillset.skills.each do |skill| %>
-              <li><%= skill %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <div class="section-info">
+        <% data.resume.skills.each do |skillset| %>
+          <div class="skillset">
+            <h3><%= escape_html skillset.section %></h3>
+            <ul class="skillset">
+              <% skillset.skills.each do |skill| %>
+                <li><%= skill %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
     </section>
 
     <section id="employment">
       <h2>Employment</h2>
-      <% data.resume.jobs.each do |job| %>
-        <div class="employment" id="employment-<%= job.id %>">
-          <hgroup>
-          <h3><%= escape_html job.name %></h3>
-          <h4 class="town"><%= escape_html job.where %></h4>
-          <h4 class="date-range">
-            <span class="range-start"><%= escape_html job.when.start %></span>
-            &ndash;
-            <span class="range-end"><%= escape_html job.when.end %></span>
-          </h4>
-          <h4 class="title"><%= escape_html job.title %></h4>
-          </hgroup>
-          <ul class="duties">
-            <% job.duties.each do |duty| %>
-              <li><%= escape_html(duty) %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <div class="section-info">
+        <% data.resume.jobs.each do |job| %>
+          <div class="employment" id="employment-<%= job.id %>">
+            <hgroup>
+            <h3><%= escape_html job.name %></h3>
+            <h4 class="town"><%= escape_html job.where %></h4>
+            <h4 class="date-range">
+              <span class="range-start"><%= escape_html job.when.start %></span>
+              &ndash;
+              <span class="range-end"><%= escape_html job.when.end %></span>
+            </h4>
+            <h4 class="title"><%= escape_html job.title %></h4>
+            </hgroup>
+            <ul class="duties">
+              <% job.duties.each do |duty| %>
+                <li><%= escape_html(duty) %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
     </section>
 
     <section id="education">
       <h2>Education</h2>
-      <% data.resume.education.each do |school| %>
-        <div class="education" id="education-<%= school.id %>">
-          <hgroup>
-          <h3><%= escape_html school.where %></h3>
-          <h4 class="degree"><%= escape_html school.degree %></h4>
-          </hgroup>
-          <ul class="duties">
-            <% school.extra.each do |extra| %>
-              <li><%= escape_html(extra) %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <div class="section-info">
+        <% data.resume.education.each do |school| %>
+          <div class="education" id="education-<%= school.id %>">
+            <hgroup>
+            <h3><%= escape_html school.where %></h3>
+            <h4 class="degree"><%= escape_html school.degree %></h4>
+            </hgroup>
+            <ul class="duties">
+              <% school.extra.each do |extra| %>
+                <li><%= escape_html(extra) %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
     </section>
 
     <section id="links">
       <h2>Links</h2>
-      <% data.resume.links.each do |section| %>
-        <div>
-          <h3><%= escape_html section.section %></h3>
-          <ul>
-            <% section.links.each do |link| %>
-              <% if link["text"] %>
-                <li><%= link_to escape_html(link.text), link.url %></li>
-              <% else %>
-                <li><%= link_to escape_html(link), link %></li>
+      <div class="section-info">
+        <% data.resume.links.each do |section| %>
+          <div>
+            <h3><%= escape_html section.section %></h3>
+            <ul>
+              <% section.links.each do |link| %>
+                <% if link["text"] %>
+                  <li><%= link_to escape_html(link.text), link.url %></li>
+                <% else %>
+                  <li><%= link_to escape_html(link), link %></li>
+                <% end %>
               <% end %>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
     </section>
 
     <footer>

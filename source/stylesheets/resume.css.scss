@@ -70,7 +70,6 @@ header {
   div.contact {
     dl {
       font-size: 0.875em;
-      line-height: 1.4;
       display: inline-block;
       dt {
         float: left;
@@ -146,9 +145,9 @@ section {
     border-top: thin solid #ccc;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
-  }
-  h2 + div.employment {
-    border-top: none;
+    &:first-child {
+      border-top: none;
+    }
   }
 }
 
@@ -171,7 +170,11 @@ footer {
   }
 }
 
-@mixin wide-header {
+@include at-breakpoint(30em 6 45em) {
+  article.resume {
+    @include container;
+    @include susy-grid-background;
+  }
   header {
     @include clearfix;
     hgroup {
@@ -181,30 +184,48 @@ footer {
     div.contact {
       @include span-columns(3 omega);
       text-align: right;
+      dl {
+        line-height: 1.5;
+      }
     }
   }
 }
 
-@include at-breakpoint(30em 6 45em) {
+@include at-breakpoint(45em 9) {
   article.resume {
     @include container;
     @include susy-grid-background;
   }
-  @include wide-header;
-}
-
-@include at-breakpoint(45em 9 60em) {
-  article.resume {
-    @include container;
-    @include susy-grid-background;
+  header {
+    @include clearfix;
+    hgroup {
+      @include span-columns(5);
+      text-align: left;
+      h1 {
+        font-size: 3em;
+      }
+      h2 {
+        font-size: 1.75em;
+      }
+    }
+    div.contact {
+      @include span-columns(4 omega);
+      text-align: right;
+      font-size: 1.4em;
+      dl {
+        line-height: 1.6;
+      }
+    }
   }
-  @include wide-header;
-}
-
-@include at-breakpoint(60em 12) {
-  article.resume {
-    @include container;
-    @include susy-grid-background;
+  section {
+    @include clearfix;
+    h2 {
+      @include span-columns(3);
+      text-align: right;
+      font-size: 2em;
+    }
+    div.section-info {
+      @include span-columns(6 omega);
+    }
   }
-  @include wide-header;
 }
