@@ -61,7 +61,7 @@ skills:
 
 jobs:
   - id: alice
-    name: Alice
+    name: Alice.com
     when:
       start: 2011
       end: present
