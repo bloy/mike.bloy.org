@@ -89,7 +89,7 @@ jobs:
       - Maintain Hudson continuous integration
       - Maintain Maven and Ant-based build systems
       - Maintain Confluence wiki
-      - Maintain JIRA issue-tracking system.
+      - Maintain JIRA issue-tracking system
 
   - id: altruist
     name: Altruist Media
@@ -100,9 +100,9 @@ jobs:
     title: New Media Manager/System Administrator/Programmer
     duties:
       - Administer and monitor network with Windows, Linux, and Mac clients and servers
-      - Create multimedia applications for web, DVD video, DVD-ROM, CD-ROM, and presentations using LAMP, Flash, and other appropriate technologies.
-      - Create database-driven web applications to client specifications.
-      - Administer and update client websites, databases, and mailing lists.
+      - Create multimedia applications for web, DVD video, DVD-ROM, CD-ROM, and presentations using LAMP, Flash, and other appropriate technologies
+      - Create database-driven web applications to client specifications
+      - Administer and update client websites, databases, and mailing lists
       - Draft proposals, budgets, and responses to RFPs
       - Review and recommend hardware and software for company use
       - Assign and track system administration, programming, and multimedia projects
@@ -116,11 +116,11 @@ jobs:
     where: Washington, DC
     title: Technology Specialist
     duties:
-      - Coordinate with graphics design team, outside consultants, and in-house staff to design redesigned website.
-      - Administer database, web server, and legacy Perl code for preexisting website.
-      - Develop PHP-based redesigned website.
-      - Translate design team’s templates into HTML/CSS for use in dynamic website.
-      - Work with hosting consultants to launch redesigned website with no loss of service and planning for emergency rollback.
+      - Coordinate with graphics design team, outside consultants, and in-house staff to design redesigned website
+      - Administer database, web server, and legacy Perl code for preexisting website
+      - Develop PHP-based redesigned website
+      - Translate design team’s templates into HTML/CSS for use in dynamic website
+      - Work with hosting consultants to launch redesigned website with no loss of service and planning for emergency rollback
 
   - id: csl
     name: UW-Madison - Computer Science Lab
@@ -130,11 +130,11 @@ jobs:
     where: Madison, WI
     title: Webmaster, System Administrator/Programmer
     duties:
-      - Administer computer-science department’s Apache/Solaris web servers.
-      - Implement Apache+PHP solution for department web sites.
-      - End-user support for UNIX and Windows NT instructional and research computers, including orientation classes for new UNIX users.
-      - Software installation and maintenance.
-      - Maintain software security while not affecting instructional use.
+      - Administer computer-science department’s Apache/Solaris web servers
+      - Implement Apache+PHP solution for department web sites
+      - End-user support for UNIX and Windows NT instructional and research computers, including orientation classes for new UNIX users
+      - Software installation and maintenance
+      - Maintain software security while not affecting instructional use
 
 education:
   - id: bswiscedu
