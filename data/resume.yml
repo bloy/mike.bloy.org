@@ -44,7 +44,7 @@ skills:
       - "Subversion"
       - "Git"
       - "MySQL"
-      - "PostgresSQL"
+      - "PostgreSQL"
       - "Oracle"
       - "Apache"
       - "Nginx"
@@ -56,7 +56,7 @@ skills:
       - "Maven"
       - "Jenkins"
       - "Archiva"
-      - "Jira"
+      - "JIRA"
       - "Confluence"
 
 jobs:
@@ -72,7 +72,7 @@ jobs:
       - Business logic and domain space development in Ruby and Java
       - Mobile (iOS/Android) app development using Cordova/Phonegap
       - Created combined codebase for alice.com and alice.es with developers from the Spain and Madison offices
-      - Communicate with remote developers via appropriate technologies, including IRC chat, issue tracking software, email, and google hangouts
+      - Communicate with remote developers via appropriate technologies, including IRC chat, issue tracking software, email, and Google Hangouts
 
   - id: tds
     name: TDS Telecom
@@ -83,7 +83,7 @@ jobs:
     title: Sr. Software Developer
     duties:
       - Maintain and enhance applications in support of enterprise Internet services
-      - Coordinate and oversee development of Java, EJB and Web-based telecom provisioning application, with front-ends facing internal and external users
+      - Coordinate and oversee development of Java, EJB and web-based telecom provisioning application, with front-ends facing internal and external users
       - Integration of billing, hardware provisioning, shipping, and availability systems
       - Act as subject matter expert on above systems; Gather requirements from and provide estimates to business units
       - Maintain Hudson continuous integration
