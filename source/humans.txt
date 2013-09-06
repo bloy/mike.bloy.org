@@ -11,14 +11,16 @@
 
   Wife: Kirstin Bloy
 
-  Design Assistance: Tracy Harris
+  Design Assistance: Tracy Harris, Jerod Gibson
 
   Photo Awesomeness: Madison, WI, skyline
+  Photo Credit: Mike Bloy
 
 /* SITE */
 
-  Last update: 11-Mar-2012
+  Last update: 6 September 2013
   Language: English
   Doctype: HTML5
   Standards: HTML5/CSS3
-  Software: Vim, Gimp, Git, Linux
+  Software: Vim, Gimp, Git, Linux, Middleman
+  Git repository: https://github.com/bloy/mike.bloy.org
