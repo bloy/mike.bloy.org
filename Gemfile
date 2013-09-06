@@ -1,5 +1,5 @@
-gem 'bcdatabase'
 gem 'capistrano'
+gem 'dotenv'
 gem 'susy'
 gem 'compass'
 gem 'middleman'

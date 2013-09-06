@@ -4,11 +4,6 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.3.2)
-    bcdatabase (1.2.1)
-      activesupport (>= 2.0)
-      highline (~> 1.5)
-      i18n
-      thor (~> 0.14.6)
     capistrano (2.15.5)
       highline
       net-scp (>= 1.0.0)
@@ -25,6 +20,7 @@ GEM
       fssm (>= 0.2.7)
       sass (~> 3.1)
     daemons (1.1.9)
+    dotenv (0.8.0)
     em-websocket (0.3.8)
       addressable (>= 2.1.1)
       eventmachine (>= 0.12.9)
@@ -134,9 +130,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcdatabase
   capistrano
   compass
+  dotenv
   middleman
   rb-inotify (~> 0.8.8)
   susy

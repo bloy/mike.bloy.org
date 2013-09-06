@@ -2,3 +2,4 @@
 build
 source/images/icon-*.png
 .bundle
+.env
