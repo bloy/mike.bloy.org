@@ -1,13 +1,12 @@
-require 'bcdatabase'
-config = (Bcdatabase.load())['production', 'mike.bloy.org']
-
 set :application, "mike.bloy.org"
-set :location, config['location']
-set :user, config['user']
-set :repository, config['repository']
-set :branch, config['branch'] if config['branch']
+require 'dotenv/capistrano'
+
+set :location, ENV['CAPISTRANO_LOCATION']
+set :user, ENV['CAPISTRANO_USER']
+set :repository, ENV['CAPISTRANO_REPOSITORY']
+set :branch, ENV['CAPISTRANO_BRANCH'] if ENV['CAPISTRANO_BRANCH']
 set :use_sudo, false
-set :deploy_to, config['deploy_to']
+set :deploy_to, ENV['CAPISTRANO_DEPLOY_TO']
 set :deploy_via, :copy
 set :copy_exclude, ".git/*"
 set :build_script, "bundle install && middleman build && middleman build && mv build public"
