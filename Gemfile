@@ -1,6 +1,3 @@
-# A sample Gemfile
-source :gemcutter
-
 gem 'bcdatabase'
 gem 'capistrano'
 gem 'susy'
