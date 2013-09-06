@@ -60,11 +60,23 @@ skills:
       - "Confluence"
 
 jobs:
+  - id: ccap
+    name: State of Wisconsin Court System (Omni Resources)
+    when:
+      start: 2013
+      end: present
+    where: Madison, WI
+    title: Developer
+    duties:
+      - Ruby on Rails web development for public, specialized public, and internal web applications
+      - Legacy code maintenance, bugfixes and new feature development
+      - Linux support of development and production servers (devops)
+
   - id: alice
     name: Alice.com
     when:
       start: 2011
-      end: present
+      end: 2013
     where: Middleton, WI
     title: Developer
     duties:
