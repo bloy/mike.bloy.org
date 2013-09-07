@@ -1,6 +1,7 @@
-set :application, "mike.bloy.org"
-require 'dotenv/capistrano'
+require 'dotenv'
+Dotenv.load
 
+set :application, "mike.bloy.org"
 set :location, ENV['CAPISTRANO_LOCATION']
 set :user, ENV['CAPISTRANO_USER']
 set :repository, ENV['CAPISTRANO_REPOSITORY']
