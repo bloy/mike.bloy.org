@@ -18,7 +18,7 @@
 
 /* SITE */
 
-  Last update: 6 September 2013
+  Last update: 12 September 2013
   Language: English
   Doctype: HTML5
   Standards: HTML5/CSS3
