@@ -1,10 +1,10 @@
 I'm a developer, linux consultant, web standards advocate, and
 version control guru.
 
-I currently work as a contractor for the State of Wisconsin Court System.
-Their opinions are theirs, mine are mine. This page contains my opinions, not
-theirs.  Previous employers have been: a startup, a telecom company, a
-production house, a nonprofit, and a university.
+I currently work as a contractor for the [State of Wisconsin Court
+System][wicourts].  Their opinions are theirs, mine are mine. This page
+contains my opinions, not theirs.  Previous employers have been: a startup, a
+telecom company, a production house, a nonprofit, and a university.
 
 I can write code productively in Ruby, Java, Python, or Perl. I'm slightly less
 efficient in PHP, or C++, having lost the day-to-day knowledge. Any other
@@ -25,3 +25,4 @@ and unobtrusive javascript since their beginnings, and applied them as they
 evolved.
 
 [debian]: http://debian.org "Debian"
+[wicourts]: http://wicourts.gov
