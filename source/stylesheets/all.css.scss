@@ -19,6 +19,10 @@ $total-columns: 7; // mobile first max of 35em
 
 @include border-box-sizing;
 
+body {
+  line-height: 1.25;
+}
+
 #page_container {
   @include container;
 }
@@ -45,5 +49,19 @@ nav ul.fa-ul li i.fa {
   }
   &.fa-twitter {
     color: #00aced;
+  }
+}
+
+#page_footer {
+  i.fa {
+    &.fa-html5 {
+      color: #f06529;
+    }
+    &.fa-css3 {
+      color: #0092bf;
+    }
+    &.fa-github {
+      color: #000000;
+    }
   }
 }
