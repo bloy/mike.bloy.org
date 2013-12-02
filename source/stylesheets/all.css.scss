@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import "compass";
+@import "susy";
+
+// grid
+
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width / 2;
+
+$total-columns: 7; // mobile first max of 35em
+
+// rules
+
+@include border-box-sizing;
+
+#page_container {
+  @include container;
+}
