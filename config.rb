@@ -1,3 +1,6 @@
+require 'dotenv'
+Dotenv.load
+
 ###
 # Compass
 ###
@@ -67,6 +70,14 @@ end
 
 # Change the images directory
 # set :images_dir, "alternative_image_directory"
+
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.method = :sftp
+  deploy.host = ENV['DEPLOY_HOST']
+  deploy.path = ENV['DEPLOY_PATH']
+  deploy.user = ENV['DEPLOY_USER']
+end
 
 # Build-specific configuration
 configure :build do
