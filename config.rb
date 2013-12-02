@@ -52,12 +52,22 @@ end
 # Reload the browser automatically whenever files change
 # activate :livereload
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def nav_link_to(text, link, title = nil)
+    content_tag(:li) do
+      link_to(text, link, title: (title ? title : text))
+    end
+  end
+
+  def email_nav_link_to(text, email)
+    nav_link_to(text, "mailto:#{email}", email)
+  end
+
+  def social_nav_link_to(social)
+    nav_link_to(social.title, social.url,
+                (social.extended_title ? social.extended_title : social.title))
+  end
+end
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
