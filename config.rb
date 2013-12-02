@@ -11,10 +11,8 @@ Dotenv.load
 #   config.output_style = :compact
 # end
 
-activate :automatic_image_sizes
-
 ###
-# Page command
+# Page options, layouts, aliases and proxies
 ###
 
 page "/resume.html", :layout => false
@@ -32,24 +30,16 @@ page "/resume.html", :layout => false
 #   page "/admin/*"
 # end
 
-# Proxy (fake) files
-# page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
-#   @which_fake_page = "Rendering a fake page with a variable"
-# end
+# Proxy pages (http://middlemanapp.com/dynamic-pages/)
+# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
+#  :which_fake_page => "Rendering a fake page with a local variable" }
 
 ###
 # Helpers
 ###
 
-helpers do
-  def extra_title
-    (content_for?(:title) ? ": #{yield_content(:title)}" : "")
-  end
-end
-
-set :css_dir, "stylesheets"
-set :js_dir, "javascripts"
-set :images_dir, "images"
+# Automatic image dimensions on image_tag helper
+activate :automatic_image_sizes
 
 activate :deploy do |deploy|
   deploy.build_before = true
@@ -59,11 +49,25 @@ activate :deploy do |deploy|
   deploy.user = ENV['DEPLOY_USER']
   deploy.clean = true
 end
+# Reload the browser automatically whenever files change
+# activate :livereload
 
+# Methods defined in the helpers block are available in templates
+# helpers do
+#   def some_helper
+#     "Helping"
+#   end
+# end
+
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+
+# Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
   activate :minify_javascript
-  activate :cache_buster
   activate :relative_assets
+  activate :asset_hash
 end
