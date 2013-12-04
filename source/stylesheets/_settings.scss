@@ -1,0 +1,12 @@
+// colors
+
+$contrasted-dark-default: #000000;
+$contrasted-light-default: #ffffff;
+
+// grid
+
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width / 2;
+
+$total-columns: 7; // mobile first max of 35em
