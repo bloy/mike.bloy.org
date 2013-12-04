@@ -1,0 +1,19 @@
+@import "compass";
+
+@mixin cs-test {
+  @if $show-cs-test {
+    body:before {
+      content: "";
+      display: block;
+      height: 2em;
+      position: relative;
+      z-index: 999;
+      @include background(
+        linear-gradient(left,
+                        $cs-color1 0%, $cs-color1 25%,
+                        $cs-color2 25%, $cs-color2 50%,
+                        $cs-color3 50%, $cs-color3 75%,
+                        $cs-color4 75%, $cs-color4 100%));
+    }
+  }
+}

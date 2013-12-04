@@ -1,7 +1,23 @@
+@import "compass";
+@import "susy";
+
 // colors
 
-$contrasted-dark-default: #000000;
-$contrasted-light-default: #ffffff;
+/// color scheme
+
+/* color scheme id: http://colorschemedesigner.com/#3311Sp9brubF3 */
+
+$cs-color1: #0d3e29;
+$cs-color2: #133023;
+$cs-color3: #80bda3;
+$cs-color4: #052a1a;
+$show-cs-test: false;
+
+/// derived colors
+
+$page-background: $cs-color2;
+$content-bg-color: transparentize(#fff, 0.2);
+$text-color: $cs-color4;
 
 // grid
 
@@ -10,3 +26,5 @@ $gutter-width: 1em;
 $grid-padding: $gutter-width / 2;
 
 $total-columns: 7; // mobile first max of 35em
+
+

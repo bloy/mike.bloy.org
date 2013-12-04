@@ -1,25 +1,28 @@
 @charset "utf-8";
 
-@import "settings";
-@import "compass";
-@import "susy";
+@import "settings"; // also imports all the needed imports
+@import "mixins";
 
 // rules
 
+@include cs-test;
 @include border-box-sizing;
 
 body {
   line-height: 1.25;
+  background: $page-background;
 }
 
 #page_container {
   @include container;
+  background: $content-bg-color;
+  color: $text-color;
 }
 
 // nav icon colors
 
 nav ul.fa-ul li i {
-  color: #000000;
+  color: $text-color;
   // from simpleicons.org
   &.fa-github {
     color: #000000;
