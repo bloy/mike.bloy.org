@@ -24,28 +24,34 @@ body {
   font-family: "TexGyrePagellaRegular", serif;
 }
 
-// nav icon colors
+nav.nav_links {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-nav ul li i.fa {
-  color: $text-color;
-  // from simpleicons.org
-  &.fa-github {
-    color: #000000;
-  }
-  &.fa-linkedin-square {
-    color: #007fb1;
-  }
-  &.fa-stack-exchange {
-    color: #1f5196;
-  }
-  &.fa-google-plus-square {
-    color: #d14836;
-  }
-  &.fa-facebook-square {
-    color: #3b5998;
-  }
-  &.fa-twitter {
-    color: #00aced;
+  i.fa {
+    color: $text-color;
+    // nav icon colors from simpleicons.org
+    &.fa-github {
+      color: #000000;
+    }
+    &.fa-linkedin-square {
+      color: #007fb1;
+    }
+    &.fa-stack-exchange {
+      color: #1f5196;
+    }
+    &.fa-google-plus-square {
+      color: #d14836;
+    }
+    &.fa-facebook-square {
+      color: #3b5998;
+    }
+    &.fa-twitter {
+      color: #00aced;
+    }
   }
 }
 
