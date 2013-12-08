@@ -17,3 +17,10 @@
     }
   }
 }
+
+@mixin social-icon($id, $icon) {
+  li#nav_#{$id} a:before {
+    background-image: inline-image("social/webicon-#{$icon}.svg");
+  }
+}
+

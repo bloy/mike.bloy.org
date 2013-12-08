@@ -30,6 +30,27 @@ nav.nav_links ul {
   list-style: none;
 }
 
+nav#social_links {
+  li a:before {
+    content: "";
+    height: 2em;
+    width: 2em;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25em;
+    margin-bottom: 0.5em;
+  }
+  @include social-icon(email, mail);
+  @include social-icon(github, github);
+  @include social-icon(coderwall, coderwall);
+  @include social-icon(linkedin, linkedin);
+  @include social-icon(stackexchange, stackoverflow);
+  @include social-icon(gplus, googleplus);
+  @include social-icon(facebook, facebook);
+  @include social-icon(twitter, twitter);
+}
+
 #page_footer {
   i.fa {
     // icon colors from simpleicons.org

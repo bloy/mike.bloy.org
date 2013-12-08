@@ -18,7 +18,7 @@
 
     <nav id="social_links" class="nav_links">
     <ul>
-      <%= email_nav_link "email", "Email", data.contact.email %>
+      <%= email_nav_link %>
       <% data.contact.social.each do |social| %>
         <%= nav_link social %>
       <% end %>

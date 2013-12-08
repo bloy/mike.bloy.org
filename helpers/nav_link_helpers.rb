@@ -6,10 +6,11 @@ module NavLinkHelpers
     end
   end
 
-  def email_nav_link(id, text, email)
-    nav_link(id: id,
-             title: text,
-             extended_title: email,
+  def email_nav_link
+    email = data.contact.email
+    nav_link(id: 'email',
+             title: 'Email',
+             extended_title: "Email: #{email}",
              url: "mailto:#{email}")
   end
 
