@@ -5,7 +5,7 @@
 
   <div id="page_content">
     <nav id="contentlinks">
-    <ul class="fa-ul">
+    <ul>
       <%= nav_link_to "Intro", "/" %>
       <%= nav_link_to "Professional", "/professional.html" %>
       <%= nav_link_to "Personal", "/personal.html" %>
@@ -18,7 +18,7 @@
     </article>
 
     <nav id="links">
-    <ul class="fa-ul">
+    <ul>
       <%= email_nav_link_to "Email", data.contact.email, 'envelope-o' %>
       <% data.contact.social.each do |social| %>
         <%= social_nav_link_to social %>

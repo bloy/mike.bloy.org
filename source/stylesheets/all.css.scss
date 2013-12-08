@@ -26,7 +26,7 @@ body {
 
 // nav icon colors
 
-nav ul.fa-ul li i {
+nav ul li i.fa {
   color: $text-color;
   // from simpleicons.org
   &.fa-github {
@@ -50,7 +50,7 @@ nav ul.fa-ul li i {
 }
 
 #page_footer {
-  i {
+  i.fa {
     &.fa-html5 {
       color: #f06529;
     }

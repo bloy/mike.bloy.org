@@ -2,8 +2,8 @@ module NavLinkHelpers
   def nav_link_to(text, link, title = nil, icon = nil)
     link_text = text
     icon = 'dot-circle-o' unless icon
-    cssclass = "fa fa-li fa-#{icon}"
-    link_text = content_tag(:i, "", class: cssclass) + link_text
+    cssclass = "fa fa-#{icon} fa-fw"
+    link_text = content_tag(:i, "", class: cssclass) + " #{link_text}"
     content_tag(:li) do
       link_to(link_text, link, title: (title ? title : text))
     end
