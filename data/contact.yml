@@ -11,10 +11,6 @@ social:
     url: http://github.com/bloy
     icon: github
 
-  - id: coderwall
-    title: Coderwall
-    url: http://coderwall.com/bloy
-
   - id: linkedin
     title: LinkedIn
     url: http://www.linkedin.com/in/mikebloy
