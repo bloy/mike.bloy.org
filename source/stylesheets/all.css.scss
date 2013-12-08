@@ -31,15 +31,27 @@ nav.nav_links ul {
 }
 
 nav#social_links {
+  text-align: center;
+  li {
+    @include button;
+    text-align: left;
+    font-size: 0.875em;
+    a {
+      text-decoration: none;
+      padding: 0.5em;
+      padding: 0.25em;
+      display: block;
+      @include link-colors($text-color, $button-text-color, $text-color, $text-color, $text-color);
+    }
+  }
   li a:before {
     content: "";
-    height: 2em;
-    width: 2em;
+    height: 1.618em;
+    width: 1.618em;
     background-size: contain;
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.25em;
-    margin-bottom: 0.5em;
   }
   @include social-icon(email, mail);
   @include social-icon(github, github);

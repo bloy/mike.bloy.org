@@ -24,3 +24,13 @@
   }
 }
 
+@mixin button($background: $button-color, $color: $button-text-color) {
+  display: inline-block;
+  margin: 0.25em 0.125em;
+  @include border-radius(0.25em);
+  border: thin solid $button-color;
+  @include transition-duration(0.25s);
+  &:hover {
+    background: $background;
+  }
+}
