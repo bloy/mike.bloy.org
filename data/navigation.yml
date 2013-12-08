@@ -1,0 +1,21 @@
+main:
+  - id: index
+    title: Intro
+    url: /
+
+  - id: professional
+    title: Professional
+    url: /professional.html
+
+  - id: personal
+    title: Personal
+    url: /personal.html
+
+  - id: resume
+    title: Resume
+    url: /resume.html
+
+  - id: credits
+    title: Credits
+    url: /credits.html
+
