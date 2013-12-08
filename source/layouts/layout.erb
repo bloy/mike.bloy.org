@@ -6,10 +6,9 @@
   <div id="page_content">
     <nav id="content_links" class="nav_links">
     <ul>
-      <%= nav_link_to "Intro", "/" %>
-      <%= nav_link_to "Professional", "/professional.html" %>
-      <%= nav_link_to "Personal", "/personal.html" %>
-      <%= nav_link_to "Credits", "/credits.html" %>
+      <% data.navigation.main.each do |link| %>
+        <%= nav_link link %>
+      <% end %>
     </ul>
     </nav>
 
@@ -19,9 +18,9 @@
 
     <nav id="social_links" class="nav_links">
     <ul>
-      <%= email_nav_link_to "Email", data.contact.email, 'envelope-o' %>
+      <%= email_nav_link "email", "Email", data.contact.email %>
       <% data.contact.social.each do |social| %>
-        <%= social_nav_link_to social %>
+        <%= nav_link social %>
       <% end %>
     </ul>
     </nav>

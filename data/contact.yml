@@ -4,7 +4,6 @@ social:
   - id: github
     title: Github
     url: http://github.com/bloy
-    icon: github
 
   - id: coderwall
     title: Coderwall
@@ -13,29 +12,23 @@ social:
   - id: linkedin
     title: LinkedIn
     url: http://www.linkedin.com/in/mikebloy
-    icon: linkedin-square
 
   - id: stackexchange
     title: Stack Exchange
     url: http://stackexchange.com/users/1296619/bloy?tab=accounts
-    icon: stack-exchange
 
   - id: gplus
     title: Google+
     url: http://plus.google.com/114407630208677316457/about
-    icon: google-plus-square
 
   - id: facebook
     title: Facebook
     url: http://www.facebook.com/mbloy
-    icon: facebook-square
 
   - id: twitter
     title: Twitter
     url: http://twitter.com/mikebloy
-    icon: twitter
 
   - id: stackcareers
     title: Stack Careers
     url: http://careers.stackoverflow.com/mikebloy
-    icon: stack-exchange
