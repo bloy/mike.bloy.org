@@ -24,12 +24,10 @@ body {
   font-family: "TexGyrePagellaRegular", serif;
 }
 
-nav.nav_links {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+nav.nav_links ul {
+  padding: 0 0 0 0;
+  margin: 0;
+  list-style: none;
 }
 
 #page_footer {
