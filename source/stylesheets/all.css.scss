@@ -11,12 +11,17 @@
 body {
   line-height: 1.25;
   background: $page-background;
+  font-family: "TexGyreAdventorRegular", sans-serif;
 }
 
 #page_container {
   @include container;
   background: $content-bg-color;
   color: $text-color;
+}
+
+#page_header {
+  font-family: "TexGyrePagellaRegular", serif;
 }
 
 // nav icon colors
