@@ -16,8 +16,13 @@ $show-cs-test: true;
 /// derived colors
 
 $page-background: $cs-color2;
+$header-background: $cs-color4;
+$header-color: $cs-color3;
+$footer-color: $cs-color3;
+$footer-background: $cs-color4;
 $content-bg-color: transparentize(#fff, 0.2);
 $text-color: $cs-color4;
+$link-color: $text-color;
 $border-color: $cs-color4;
 $button-color: $cs-color3;
 $button-text-color: $cs-color1;

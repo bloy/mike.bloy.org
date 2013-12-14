@@ -30,7 +30,7 @@ nav.nav_links ul {
   list-style: none;
 }
 
-nav#social_links {
+nav#social_links, nav#content_links {
   text-align: center;
   li {
     text-align: left;
@@ -40,6 +40,9 @@ nav#social_links {
       @include button;
     }
   }
+}
+
+nav#social_links {
   li a:before {
     content: "";
     height: 1.618em;
