@@ -10,13 +10,13 @@
 
 body {
   line-height: 1.25;
-  background: $page-background;
+  background: inline-image('graph-trans-bg.png') $page-background;
   font-family: "TexGyreAdventorRegular", sans-serif;
 }
 
 #page_container {
   @include container;
-  background: $content-bg-color;
+  background: inline-image('noise-trans-bg.png') $content-bg-color;
   color: $text-color;
 }
 
