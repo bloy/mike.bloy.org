@@ -14,14 +14,28 @@ body {
   font-family: "TexGyreAdventorRegular", sans-serif;
 }
 
+a:link {
+  text-decoration: underline;
+}
+
 #page_container {
   @include container;
   background: inline-image('noise-trans-bg.png') $content-bg-color;
   color: $text-color;
+  a:link {
+    color: $link-color;
+  }
 }
 
 #page_header {
   font-family: "TexGyrePagellaRegular", serif;
+  background: $header-background;
+  color: $header-color;
+  @include bleed($gutter-width);
+  border: 1px solid $header-background;
+  a:link {
+    color: $header-color;
+  }
 }
 
 nav.nav_links ul {
