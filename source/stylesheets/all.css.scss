@@ -33,15 +33,11 @@ nav.nav_links ul {
 nav#social_links {
   text-align: center;
   li {
-    @include button;
     text-align: left;
     font-size: 0.875em;
+    display: inline-block;
     a {
-      text-decoration: none;
-      padding: 0.5em;
-      padding: 0.25em;
-      display: block;
-      @include link-colors($text-color, $button-text-color, $text-color, $text-color, $text-color);
+      @include button;
     }
   }
   li a:before {

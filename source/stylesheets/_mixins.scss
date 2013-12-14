@@ -25,12 +25,28 @@
 }
 
 @mixin button($background: $button-color, $color: $button-text-color) {
-  display: inline-block;
+  text-decoration: none;
+  padding: 0.25em;
+  display: block;
   margin: 0.25em 0.125em;
+  border: thin solid $background;
+  background: $background;
+  color: $color;
   @include border-radius(0.25em);
-  border: thin solid $button-color;
   @include transition-duration(0.25s);
-  &:hover {
+
+  &:link, &:visited {
     background: $background;
+    color: $color;
+  }
+
+  &:hover, &:focus {
+    background: $color;
+    color: $background;
+  }
+
+  &:active {
+    background: darken($color, 0.8);
+    color: $background;
   }
 }
