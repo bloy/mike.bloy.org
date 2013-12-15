@@ -100,17 +100,4 @@ nav#social_links {
   a:link, a:visited {
     color: $header-color;
   }
-
-  i.fa {
-    // icon colors from simpleicons.org
-    &.fa-html5 {
-      color: #f06529;
-    }
-    &.fa-css3 {
-      color: #0092bf;
-    }
-    &.fa-github {
-      color: #000000;
-    }
-  }
 }
