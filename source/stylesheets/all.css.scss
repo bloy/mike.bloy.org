@@ -18,23 +18,50 @@ a:link {
   text-decoration: underline;
 }
 
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-indent: 1em;
+}
+
 #page_container {
   @include container;
   background: inline-image('noise-trans-bg.png') $content-bg-color;
   color: $text-color;
-  a:link {
+  a:link, a:visited {
     color: $link-color;
   }
 }
 
-#page_header {
-  font-family: "TexGyrePagellaRegular", serif;
+#page_header, #page_footer {
   background: $header-background;
   color: $header-color;
-  @include bleed($gutter-width);
-  border: 1px solid $header-background;
-  a:link {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  @include bleed($grid-padding);
+
+  a:link, a:visited {
     color: $header-color;
+  }
+}
+
+#page_header {
+  margin-bottom: 0.5em;
+  h1 {
+    font-family: "TexGyrePagellaRegular", serif;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+#page_footer {
+  margin-top: 0.5em;
+  p {
+    text-indent: 0;
+    font-size: 0.85em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -88,16 +115,4 @@ nav#social_links {
   @include social-icon(gplus, googleplus);
   @include social-icon(facebook, facebook);
   @include social-icon(twitter, twitter);
-}
-
-#page_footer {
-  background: $header-background;
-  color: $header-color;
-  @include bleed($gutter-width);
-  border: 1px solid $header-background;
-  font-size: 0.85em;
-
-  a:link, a:visited {
-    color: $header-color;
-  }
 }
