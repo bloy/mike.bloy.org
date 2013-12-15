@@ -89,11 +89,20 @@ nav#social_links, nav#content_links {
       @include button;
     }
   }
+
+  @include at-breakpoint($break2) {
+    text-align: left;
+    li {
+      display: block;
+    }
+  }
 }
 
 nav#content_links {
   @include at-breakpoint($break1) {
     @include span-columns($links-columns, $break1-columns);
+    text-align: left;
+    li { display: block; }
   }
   @include at-breakpoint($break2) {
     @include span-columns($links-columns, $break2-columns);
