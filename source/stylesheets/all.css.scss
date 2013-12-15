@@ -12,6 +12,14 @@ body {
   line-height: 1.25;
   background: inline-image('graph-trans-bg.png') $page-background;
   font-family: "TexGyreAdventorRegular", sans-serif;
+  @include at-breakpoint($break1) {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  @include at-breakpoint($break2) {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
 }
 
 a:link {
