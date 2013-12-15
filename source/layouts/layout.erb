@@ -12,18 +12,20 @@
     </ul>
     </nav>
 
-    <article>
+    <div id="article_content">
+      <article>
       <%= yield %>
-    </article>
+      </article>
 
-    <nav id="social_links" class="nav_links">
-    <ul>
-      <%= email_nav_link %>
-      <% data.contact.social.each do |social| %>
-        <%= nav_link social %>
-      <% end %>
-    </ul>
-    </nav>
+      <nav id="social_links" class="nav_links">
+      <ul>
+        <%= email_nav_link %>
+        <% data.contact.social.each do |social| %>
+          <%= nav_link social %>
+        <% end %>
+      </ul>
+      </nav>
+    </div>
   </div>
 
   <footer id="page_footer">

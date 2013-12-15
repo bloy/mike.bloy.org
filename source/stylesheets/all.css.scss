@@ -25,12 +25,7 @@ p {
 }
 
 #page_container {
-  @include container;
-  background: inline-image('noise-trans-bg.png') $content-bg-color;
-  color: $text-color;
-  a:link, a:visited {
-    color: $link-color;
-  }
+  @include container($total-columns, $break1, $break2);
 }
 
 #page_header, #page_footer {
@@ -38,7 +33,8 @@ p {
   color: $header-color;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  @include bleed($grid-padding);
+  padding-left: $basic-margin;
+  padding-right: $basic-margin;
 
   a:link, a:visited {
     color: $header-color;
@@ -46,7 +42,6 @@ p {
 }
 
 #page_header {
-  margin-bottom: 0.5em;
   h1 {
     font-family: "TexGyrePagellaRegular", serif;
     font-size: 1.8em;
@@ -56,7 +51,6 @@ p {
 }
 
 #page_footer {
-  margin-top: 0.5em;
   p {
     text-indent: 0;
     font-size: 0.85em;
@@ -115,4 +109,17 @@ nav#social_links {
   @include social-icon(gplus, googleplus);
   @include social-icon(facebook, facebook);
   @include social-icon(twitter, twitter);
+}
+
+#page_content {
+  background: inline-image('noise-trans-bg.png') $content-bg-color;
+  color: $text-color;
+  a:link, a:visited {
+    color: $link-color;
+  }
+
+  nav.nav_links, article {
+    padding-left: $basic-margin;
+    padding-right: $basic-margin;
+  }
 }
