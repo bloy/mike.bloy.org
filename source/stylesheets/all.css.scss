@@ -91,6 +91,16 @@ nav#social_links {
 }
 
 #page_footer {
+  background: $header-background;
+  color: $header-color;
+  @include bleed($gutter-width);
+  border: 1px solid $header-background;
+  font-size: 0.85em;
+
+  a:link, a:visited {
+    color: $header-color;
+  }
+
   i.fa {
     // icon colors from simpleicons.org
     &.fa-html5 {
