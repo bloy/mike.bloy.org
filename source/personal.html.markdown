@@ -1,3 +1,6 @@
+---
+title: Personal
+---
 I am a husband and father, with a wonderful wife and a school-age son.
 My hobbies include photography, bicycling, tabletop and computer
 gaming, and tinkering with computers. My wife shares some of these and

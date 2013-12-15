@@ -1,3 +1,6 @@
+---
+title: Professional
+---
 I'm a developer, linux consultant, web standards advocate, and
 version control guru.
 

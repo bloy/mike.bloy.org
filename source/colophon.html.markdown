@@ -1,3 +1,6 @@
+---
+title: Colophon
+---
 This site was written by hand in [VIM][vim], and designed directly in the
 browser. It uses [jQuery][jquery] for behavior, but does not require javascript
 to access the content of the site. It will look best in a modern browser, but
