@@ -15,7 +15,7 @@ main:
     title: Resume
     url: /resume.html
 
-  - id: credits
-    title: Credits
-    url: /credits.html
+  - id: colophon
+    title: Colophon
+    url: /colophon.html
 
