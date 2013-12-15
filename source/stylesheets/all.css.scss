@@ -57,14 +57,28 @@ nav#social_links, nav#content_links {
 }
 
 nav#social_links {
-  li a:before {
-    content: "";
-    height: 1.618em;
-    width: 1.618em;
-    background-size: contain;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 0.25em;
+  $icon_height: 1.618em;
+  $icon_margin: 0.125em;
+  $left_padding: ($icon_margin * 2) + $icon_height;
+  $vert_padding: ($icon_margin);
+  li a {
+    position: relative;
+    top: 0;
+    left: 0;
+    line-height: $icon_height;
+    padding-top: $vert_padding;
+    padding-bottom: $vert_padding;
+    padding-left: $left_padding;
+    &:before {
+      content: "";
+      height: $icon_height;
+      width: $icon_height;
+      background-size: contain;
+      display: block;
+      position: absolute;
+      left: $icon_margin;
+      top: $icon_margin;
+    }
   }
   @include social-icon(email, mail);
   @include social-icon(github, github);
