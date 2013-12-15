@@ -121,3 +121,21 @@ nav#social_links {
     padding-right: $basic-margin;
   }
 }
+
+@include at-breakpoint($break1) {
+  #page_header, #page_footer {
+    @include prefix($links-columns, $break1);
+  }
+
+  #content_links {
+    @include span-columns($links-columns, $break1);
+  }
+
+  #page_content {
+    @include clearfix;
+  }
+
+  #article_content {
+    @include span-columns($content-columns omega, $break1);
+  }
+}
