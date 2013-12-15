@@ -84,7 +84,7 @@ nav#social_links, nav#content_links {
   li {
     text-align: left;
     font-size: 0.875em;
-    display: inline-block;
+    @include inline-block;
     a {
       @include button;
     }
