@@ -38,6 +38,14 @@ p {
   a:link, a:visited {
     color: $header-color;
   }
+
+  @include at-breakpoint($break1) {
+    @include prefix($links-columns, $break1-columns);
+  }
+
+  @include at-breakpoint($break2) {
+    @include prefix($links-columns, $break2-columns);
+  }
 }
 
 #page_header {
@@ -75,6 +83,15 @@ nav#social_links, nav#content_links {
   }
 }
 
+nav#content_links {
+  @include at-breakpoint($break1) {
+    @include span-columns($links-columns, $break1-columns);
+  }
+  @include at-breakpoint($break2) {
+    @include span-columns($links-columns, $break2-columns);
+  }
+}
+
 nav#social_links {
   $icon_height: 1.618em;
   $icon_margin: 0.125em;
@@ -107,11 +124,17 @@ nav#social_links {
   @include social-icon(gplus, googleplus);
   @include social-icon(facebook, facebook);
   @include social-icon(twitter, twitter);
+
+  @include at-breakpoint($break2) {
+    @include span-columns($social-columns omega, $break2-columns);
+  }
 }
 
 #page_content {
   background: inline-image('noise-trans-bg.png') $content-bg-color;
   color: $text-color;
+  @include clearfix;
+
   a:link, a:visited {
     color: $link-color;
   }
@@ -122,20 +145,13 @@ nav#social_links {
   }
 }
 
-@include at-breakpoint($break1) {
-  #page_header, #page_footer {
-    @include prefix($links-columns, $break1);
+#article_content {
+  @include at-breakpoint($break1) {
+    @include span-columns($content-columns omega, $break1-columns);
   }
-
-  #content_links {
-    @include span-columns($links-columns, $break1);
-  }
-
-  #page_content {
-    @include clearfix;
-  }
-
-  #article_content {
-    @include span-columns($content-columns omega, $break1);
+  @include at-breakpoint($break2) {
+    &>article {
+      @include span-columns($content-columns, $break2-columns);
+    }
   }
 }

@@ -33,14 +33,18 @@ $column-width: 4em;
 $gutter-width: 1em;
 $grid-padding: 0;
 
+@function column-ems($n) {
+  @return ($n * ($column-width + $gutter-width)) + $grid-padding;
+}
+
 $content-columns: 7; // mobile first max of 35em
 $links-columns: 2; // number of columns for the links area
 $social-columns: 3; // number of columns for the social area
 $total-columns: $content-columns;
 $break1-columns: $content-columns + $links-columns;
 $break2-columns: $break1-columns + $social-columns;
-$break1: $break1-columns; // slightly wide 2 columns
-$break2: $break2-columns lt-ie9; // wide
+$break1: column-ems($break1-columns) $break1-columns column-ems($break2-columns);
+$break2: column-ems($break2-columns) $break2-columns lt-ie9; // wide
 
 // derived dimensions
 $basic-margin: $gutter-width / 2;
