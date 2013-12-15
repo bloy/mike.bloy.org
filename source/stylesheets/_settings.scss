@@ -45,7 +45,7 @@ $total-columns: $content-columns;
 $break1-columns: $content-columns + $links-columns;
 $break2-columns: $break1-columns + $social-columns;
 $break1: column-ems($break1-columns) $break1-columns column-ems($break2-columns);
-$break2: column-ems($break2-columns) $break2-columns lt-ie9; // wide
+$break2: column-ems($break2-columns) $break2-columns no-mediaqueries; // wide
 
 // derived dimensions
 $basic-margin: $gutter-width / 2;
