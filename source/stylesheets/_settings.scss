@@ -21,6 +21,7 @@ $header-color: $cs-color3;
 $footer-color: $cs-color3;
 $footer-background: $cs-color4;
 $content-bg-color: transparentize(#fff, 0.2);
+$content-bg-color-non-alpha: mix($page-background, #fff, 20%);
 $text-color: $cs-color4;
 $link-color: $text-color;
 $border-color: $cs-color4;

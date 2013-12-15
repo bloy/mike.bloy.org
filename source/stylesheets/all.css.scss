@@ -149,6 +149,9 @@ nav#social_links {
 
 #page_content {
   background: inline-image('noise-trans-bg.png') $content-bg-color;
+  html.no-rgba & {
+    background-color: $content-bg-color-non-alpha;
+  }
   color: $text-color;
   @include clearfix;
 
