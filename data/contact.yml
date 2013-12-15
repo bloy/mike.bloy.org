@@ -1,2 +1,30 @@
 phone: "+1.608.770.4934"
 email: "mike@meat-in-a-tinbloy.org"
+social:
+  - id: github
+    title: Github
+    url: http://github.com/bloy
+
+  - id: coderwall
+    title: Coderwall
+    url: http://coderwall.com/bloy
+
+  - id: linkedin
+    title: LinkedIn
+    url: http://www.linkedin.com/in/mikebloy
+
+  - id: stackexchange
+    title: Stack Exchange
+    url: http://stackexchange.com/users/1296619/bloy?tab=accounts
+
+  - id: gplus
+    title: Google+
+    url: http://plus.google.com/114407630208677316457/about
+
+  - id: facebook
+    title: Facebook
+    url: http://www.facebook.com/mbloy
+
+  - id: twitter
+    title: Twitter
+    url: http://twitter.com/mikebloy
