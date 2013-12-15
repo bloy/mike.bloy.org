@@ -21,6 +21,10 @@
 @mixin social-icon($id, $icon) {
   li#nav_#{$id} a:before {
     background-image: inline-image("social/webicon-#{$icon}.svg");
+    html.no-svg & {
+      background-image: image-url("social/webicon-#{$icon}-s.png");
+      background-repeat: no-repeat;
+    }
   }
 }
 
