@@ -1,3 +1,9 @@
+---
+menu: true
+weight: -1
+link:
+  title: Introduction
+---
 I'm Mike Bloy. You either know me, or have heard of me, or Google has dropped
 you here in a freak search engine accident.
 

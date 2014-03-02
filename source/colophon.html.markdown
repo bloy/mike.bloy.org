@@ -1,5 +1,7 @@
 ---
 title: Colophon
+menu: true
+weight: 10
 ---
 This site was written by hand in [VIM][vim], and designed directly in the
 browser. It uses [jQuery][jquery] for behavior, but does not require javascript

@@ -6,8 +6,8 @@
   <div id="page_content">
     <nav id="content_links" class="nav_links">
     <ul role="navigation">
-      <% data.navigation.main.each do |link| %>
-        <%= nav_link link %>
+      <% main_menu_items.each do |item| %>
+        <%= menu_item item %>
       <% end %>
     </ul>
     </nav>
@@ -19,9 +19,8 @@
 
       <nav id="social_links" class="nav_links">
       <ul role="navigation">
-        <%= email_nav_link %>
-        <% data.contact.social.each do |social| %>
-          <%= nav_link social %>
+        <% social_menu_items.each do |item| %>
+          <%= menu_item item %>
         <% end %>
       </ul>
       </nav>
