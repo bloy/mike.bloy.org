@@ -6,7 +6,7 @@ module NavLinkHelpers
 
   def social_menu_items
     [ EmailMenuItem.new(data.contact.email) ] +
-      data.contact.social.map{|item| SocialMenuItem.new(item) }
+      data.contact.social.map{|item| BaseMenuItem.new(item) }
   end
 
   def menu_item(item)
@@ -20,7 +20,7 @@ module NavLinkHelpers
 end
 
 
-class SocialMenuItem
+class BaseMenuItem
   def initialize(item)
     @item = item
   end
@@ -43,7 +43,7 @@ class SocialMenuItem
 end
 
 
-class EmailMenuItem < SocialMenuItem
+class EmailMenuItem < BaseMenuItem
   def initialize(email)
     @item = {
       id: 'email',
@@ -55,31 +55,19 @@ class EmailMenuItem < SocialMenuItem
 end
 
 
-class NavMenuItem
+class NavMenuItem < BaseMenuItem
   def initialize(resource)
     @resource = resource
-  end
+    simple_path = @resource.path.gsub(/#{@resource.ext}$/, '')
 
-  def name
-    if @resource.data.link && @resource.data.link.name
-      @resource.data.link.name
-    else
-      title
+    @item = {
+      id: simple_path.downcase.gsub(/[^a-z0-9_]/, '_'),
+      url: @resource.url,
+      title: title_from_resource(simple_path)
+    }
+    if @resource.data.extended_title
+      @item[:extended_title] = @resource.data.link.title
     end
-  end
-
-  def title
-    if @resource.data.link && @resource.data.link.title
-      @resource.data.link.title
-    elsif @resource.data.title
-      @resource.data.title
-    else
-      @resource.path.gsub(/#{@resource.ext}$/, '')
-    end
-  end
-
-  def link
-    @resource.url
   end
 
   def weight
@@ -90,7 +78,15 @@ class NavMenuItem
     [weight, name] <=> [other.weight, other.name]
   end
 
-  def html_id
-    @resource.path.gsub(/#{@resource.ext}$/, '')
+  private
+
+  def title_from_resource(simple_path)
+    if @resource.data.link_title
+      @resource.data.link_title
+    elsif @resource.data.title
+      @resource.data.title
+    else
+      simple_path
+    end
   end
 end
