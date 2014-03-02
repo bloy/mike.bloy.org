@@ -24,9 +24,9 @@ title: Resume
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 </head>
-<body>
+<body role="document">
   <article class="resume">
-    <header>
+    <header role="banner">
       <hgroup>
       <h1>Michael Bloy</h1>
       <h2>Developer, Sysadmin</h2>
@@ -127,7 +127,7 @@ title: Resume
       </div>
     </section>
 
-    <footer>
+    <footer role="complementary">
       <span class="name">Michael Bloy</span>
       &mdash;
       <span class="email"><%= link_to data.contact.email, "mailto:#{data.contact.email}" %></span>
