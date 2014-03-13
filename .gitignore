@@ -1,6 +1,6 @@
 /bin
 .sass-cache
-build
-source/images/icon-*.png
-.bundle
-.env
+/build
+/source/images/icon-*.png
+/.bundle
+/.env
