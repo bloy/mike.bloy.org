@@ -26,24 +26,30 @@ title: Resume
 <![endif]-->
 </head>
 <body role="document">
-  <article class="resume">
-    <header role="banner">
+  <article class="resume h-resume">
+    <header role="banner" class="p-contact h-card">
       <hgroup>
-      <h1>Michael Bloy</h1>
-      <h2>Developer, Sysadmin</h2>
+        <h1 class="p-name">
+          <span class="p-given-name">Michael</span>
+          <span class="p-family-name">Bloy</span>
+        </h1>
+        <h2 class="p-summary">Developer, Sysadmin</h2>
       </hgroup>
       <div class="contact">
         <dl>
           <dt>Phone</dt>
-          <dd><%= data.contact.phone %></dd>
+          <dd class="p-tel"><%= data.contact.phone %></dd>
 
           <dt>Email</dt>
-          <dd>
-          <%= link_to data.contact.email, "mailto:#{data.contact.email}" %>
+          <dd> <%= link_to(
+            data.contact.email,
+            "mailto:#{data.contact.email}",
+            class: 'u-email') %>
           </dd>
 
           <dt>Website</dt>
-          <dd><a href="http://mike.bloy.org/">http://mike.bloy.org</a></dd>
+          <dd><a class="u-url"
+            href="http://mike.bloy.org/">http://mike.bloy.org</a></dd>
         </dl>
       </div>
     </header>
