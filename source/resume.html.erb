@@ -74,18 +74,18 @@ title: Resume
       <h2>Employment</h2>
       <div class="section-info">
         <% data.resume.jobs.each do |job| %>
-          <div class="employment" id="employment-<%= job.id %>">
-            <hgroup>
-            <h3><%= escape_html job.name %></h3>
-            <h4 class="town"><%= escape_html job.where %></h4>
+          <div class="employment p-experience h-event" id="employment-<%= job.id %>">
+            <hgroup class="h-card">
+            <h3 class="p-name"><%= escape_html job.name %></h3>
+            <h4 class="town p-location"><%= escape_html job.where %></h4>
             <h4 class="date-range">
-              <span class="range-start"><%= escape_html job.when.start %></span>
+              <span class="range-start dt-start"><%= escape_html job.when.start %></span>
               &ndash;
-              <span class="range-end"><%= escape_html job.when.end %></span>
+              <span class="range-end dt-end"><%= escape_html job.when.end %></span>
             </h4>
-            <h4 class="title"><%= escape_html job.title %></h4>
+            <h4 class="title p-job-title p-role"><%= escape_html job.title %></h4>
             </hgroup>
-            <ul class="duties">
+            <ul class="duties p-description">
               <% job.duties.each do |duty| %>
                 <li><%= escape_html(duty) %></li>
               <% end %>
