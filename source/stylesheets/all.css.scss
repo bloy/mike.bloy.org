@@ -127,11 +127,17 @@ nav#social_links {
       height: $icon_height;
       width: $icon_height;
       background-size: contain;
+      background-repeat: no-repeat;
       display: block;
       position: absolute;
       left: $icon_margin;
       top: $icon_margin;
     }
+  }
+  li#nav_gpg a:before {
+    $size-difference: $icon_height - ($icon_height * (70.0 / 92.0));
+    width: $icon_height - $size-difference;
+    left: $icon_margin + ($size-difference / 2);
   }
   @include social-icon(email, mail);
   @include social-icon(github, github);
