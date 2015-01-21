@@ -32,3 +32,7 @@ social:
   - id: keybase
     title: Keybase
     url: https://keybase.io/bloy
+
+  - id: gpg
+    title: GPG Public Key
+    url: gpg.html

@@ -142,6 +142,7 @@ nav#social_links {
   @include social-icon(facebook, facebook);
   @include social-icon(twitter, twitter);
   @include social-icon(keybase, keybase);
+  @include social-icon(gpg, gpg);
 
   @include at-breakpoint($break2) {
     @include span-columns($social-columns omega, $break2-columns);
