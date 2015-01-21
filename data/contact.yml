@@ -28,3 +28,7 @@ social:
   - id: twitter
     title: Twitter
     url: http://twitter.com/mikebloy
+
+  - id: keybase
+    title: Keybase
+    url: https://keybase.io/bloy
