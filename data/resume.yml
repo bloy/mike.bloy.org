@@ -74,7 +74,7 @@ jobs:
       - Ruby on Rails web development for public, semi-public, and internal web applications
       - Legacy code maintenance, bugfixes and new feature development
       - Linux support of development and production servers (devops)
-      - Use ansible and docker to separate dependencies for diverse web application deployment
+      - Use Ansible and Docker to separate dependencies for diverse web application deployment
 
   - id: alice
     name: Alice.com
