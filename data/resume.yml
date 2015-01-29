@@ -14,6 +14,7 @@ skills:
     skills:
       - "HTML"
       - "CSS"
+      - "Sass/scss"
       - "XML"
       - "LaTeX"
 
@@ -43,6 +44,8 @@ skills:
       - "Vim"
       - "Subversion"
       - "Git"
+      - "Ansible"
+      - "Docker"
       - "MySQL"
       - "PostgreSQL"
       - "Oracle"
@@ -68,9 +71,10 @@ jobs:
     where: Madison, WI
     title: Developer
     duties:
-      - Ruby on Rails web development for public, specialized public, and internal web applications
+      - Ruby on Rails web development for public, semi-public, and internal web applications
       - Legacy code maintenance, bugfixes and new feature development
       - Linux support of development and production servers (devops)
+      - Use ansible and docker to separate dependencies for diverse web application deployment
 
   - id: alice
     name: Alice.com
@@ -82,9 +86,7 @@ jobs:
     duties:
       - Ruby, Rails, and Sinatra web development for alice.com and related websites
       - Business logic and domain space development in Ruby and Java
-      - Mobile (iOS/Android) app development using Cordova/Phonegap
-      - Created combined codebase for alice.com and alice.es with developers from the Spain and Madison offices
-      - Communicate with remote developers via appropriate technologies, including IRC chat, issue tracking software, email, and Google Hangouts
+      - Created combined codebase for alice.com and alice.es with international development team
 
   - id: tds
     name: TDS Telecom
@@ -97,11 +99,9 @@ jobs:
       - Maintain and enhance applications in support of enterprise Internet services
       - Coordinate and oversee development of Java, EJB and web-based telecom provisioning application, with front-ends facing internal and external users
       - Integration of billing, hardware provisioning, shipping, and availability systems
-      - Act as subject matter expert on above systems; Gather requirements from and provide estimates to business units
-      - Maintain Hudson continuous integration
+      - Gather requirements from and provide estimates to business units
+      - Maintain Jenkins, Confluence, and JIRA based development management system
       - Maintain Maven and Ant-based build systems
-      - Maintain Confluence wiki
-      - Maintain JIRA issue-tracking system
 
   - id: altruist
     name: Altruist Media
@@ -128,11 +128,11 @@ jobs:
     where: Washington, DC
     title: Technology Specialist
     duties:
-      - Coordinate with graphics design team, outside consultants, and in-house staff to design redesigned website
+      - Coordinate with graphics design team, outside consultants, and in-house staff
       - Administer database, web server, and legacy Perl code for preexisting website
       - Develop PHP-based redesigned website
-      - Translate design team’s templates into HTML/CSS for use in dynamic website
-      - Work with hosting consultants to launch redesigned website with no loss of service and planning for emergency rollback
+      - Translate design team’s templates into HTML/CSS
+      - Work with hosting consultants to launch redesigned website
 
   - id: csl
     name: UW-Madison - Computer Science Lab
@@ -144,9 +144,7 @@ jobs:
     duties:
       - Administer computer-science department’s Apache/Solaris web servers
       - Implement Apache+PHP solution for department web sites
-      - End-user support for UNIX and Windows NT instructional and research computers, including orientation classes for new UNIX users
-      - Software installation and maintenance
-      - Maintain software security while not affecting instructional use
+      - End-user support for UNIX and Windows NT instructional and research computers
 
 education:
   - id: bswiscedu
