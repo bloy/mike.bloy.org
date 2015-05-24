@@ -114,3 +114,6 @@ DEPENDENCIES
   redcarpet
   susy
   therubyracer
+
+BUNDLED WITH
+   1.10.0.rc
