@@ -1,6 +1,7 @@
 /bin
 .sass-cache
 /build
+/build.tar.gz
 /source/images/icon-*.png
 /.bundle
 /.env

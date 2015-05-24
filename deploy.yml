@@ -1,18 +1,16 @@
 ---
 - hosts: all
-  user: deploy
   sudo: true
   gather_facts: true
   roles:
     - role: website
       website:
         name: mike.bloy.org
-        directory: /srv/www/mike.bloy.org
-        user: mikeweb
-        group: webeditors
-        groupusers:
-          - mike
-        root: /srv/www/mike.bloy.org
+        directory: "{{ websites['mike_bloy_org'].directory }}"
+        user: "{{ websites['mike_bloy_org'].user }}"
+        group: "{{ websites['mike_bloy_org'].group }}"
+        groupusers: "{{ websites['mike_bloy_org'].groupusers }}"
+        root: "{{ websites['mike_bloy_org'].root }}"
         hostnames:
           - mike.bloy.org
   tasks:
@@ -26,10 +24,15 @@
       sudo: false
       run_once: true
 
-    - name: rsync site
-      copy:
-        owner: mikeweb
-        group: webeditors
-        mode: 0664
-        src: build/
+    - name: archive site
+      local_action: command tar c -z -f build.tar.gz -C build .
+      sudo: false
+      run_once: true
+
+    - name: copy archive
+      unarchive:
+        src: build.tar.gz
         dest: /srv/www/mike.bloy.org
+        owner: "{{ websites['mike_bloy_org'].user }}"
+        group: "{{ websites['mike_bloy_org'].group }}"
+        mode: g+w
