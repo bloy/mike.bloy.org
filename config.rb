@@ -1,6 +1,4 @@
-require 'dotenv'
 require 'susy'
-Dotenv.load
 
 ###
 # Compass
@@ -39,14 +37,6 @@ Dotenv.load
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
 
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.method = :rsync
-  deploy.host = ENV['DEPLOY_HOST']
-  deploy.path = ENV['DEPLOY_PATH']
-  deploy.user = ENV['DEPLOY_USER']
-  deploy.clean = true
-end
 # Reload the browser automatically whenever files change
 # activate :livereload
 
