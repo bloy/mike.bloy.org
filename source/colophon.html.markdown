@@ -18,7 +18,8 @@ The source for this website is [available on Github][source].
 Fonts are from [Font Squirrel][fontsquirrel]. The masthead font is [TeX Gyre
 Pagella][fs-pagella], and the body font is [TeX Gyre Adventor][fs-adventor].
 
-[Webicons][webicons] are from [Fairhead Creative][fairheadcreative].
+[Webicons][webicons] are from [Fairhead Creative][fairheadcreative], except
+for the [Keybase][keybase] icon, which came directly from Keybase.
 
 [ansible]: http://docs.ansible.com/
 [compass]: http://compass-style.org
@@ -27,6 +28,7 @@ Pagella][fs-pagella], and the body font is [TeX Gyre Adventor][fs-adventor].
 [fs-adventor]: http://www.fontsquirrel.com/fonts/TeX-Gyre-Adventor "Font Squirrel: TeX Gyre Adventor"
 [fs-pagella]: http://www.fontsquirrel.com/fonts/TeX-Gyre-Pagella "Font Squirrel: TeX Gyre Pagella"
 [jquery]: http://jquery.com
+[keybase]: https://keybase.io
 [middleman]: http://middlemanapp.com
 [roles-source]: https://github.com/bloy/ansible-roles
 [sass]: http://sass-lang.com
