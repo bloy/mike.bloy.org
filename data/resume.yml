@@ -1,12 +1,12 @@
 skills:
   - section: Programming Languages & Frameworks
     skills:
+      - "Python"
       - "Ruby"
       - "Rails"
       - "Javascript"
       - "JQuery"
       - "Java (JEE, JSP, EJB, Servlets)"
-      - "Python"
       - "PHP"
       - "SQL"
 
@@ -20,14 +20,14 @@ skills:
 
   - section: Operating Systems
     skills:
-      - "Linux (Debian, Redhat, Arch)"
-      - "Windows 7"
-      - "OSX"
-      - "Windows XP"
+      - "Linux (Debian, Redhat)"
+      - "Windows"
 
   - section: Protocols & Communication
     skills:
       - "HTTP"
+      - "SOAP"
+      - "REST"
       - "CGI"
       - "SSL"
       - "IMAP"
@@ -63,6 +63,17 @@ skills:
       - "Confluence"
 
 jobs:
+  - id: tds2
+    name: TDS Telecom
+    when:
+      start: October, 2015
+      end: present
+    where: Madison, WI
+    title: Sr. Software Engineer
+    duties:
+      - Develop and maintain applications related to system integration
+      - Provide expertise on Python development and Linux devops
+
   - id: ccap
     name: State of Wisconsin Court System (Omni Resources)
     when:
