@@ -1,9 +1,9 @@
 ---
-- hosts: all
+- hosts: mike_bloy_org
   sudo: true
   gather_facts: true
   roles:
-    - role: website
+    - role: nginx_site
       website:
         name: mike.bloy.org
         directory: "{{ websites['mike_bloy_org'].directory }}"
@@ -32,7 +32,7 @@
     - name: copy archive
       unarchive:
         src: build.tar.gz
-        dest: /srv/www/mike.bloy.org
+        dest: "{{ websites['mike_bloy_org'].directory }}"
         owner: "{{ websites['mike_bloy_org'].user }}"
         group: "{{ websites['mike_bloy_org'].group }}"
         mode: g+w
