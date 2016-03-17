@@ -66,8 +66,8 @@ jobs:
   - id: ccap
     name: State of Wisconsin Court System (Omni Resources)
     when:
-      start: 2013
-      end: present
+      start: April, 2013
+      end: October, 2015
     where: Madison, WI
     title: Developer
     duties:
@@ -79,8 +79,8 @@ jobs:
   - id: alice
     name: Alice.com
     when:
-      start: 2011
-      end: 2013
+      start: October, 22011
+      end: April, 2013
     where: Middleton, WI
     title: Developer
     duties:
@@ -91,8 +91,8 @@ jobs:
   - id: tds
     name: TDS Telecom
     when:
-      start: 2006
-      end: 2011
+      start: May, 2006
+      end: September, 2011
     where: Madison, WI
     title: Sr. Software Developer
     duties:
@@ -106,8 +106,8 @@ jobs:
   - id: altruist
     name: Altruist Media
     when:
-      start: 2001
-      end: 2006
+      start: September, 2001
+      end: April, 2006
     where: Arlington, VA
     title: New Media Manager/System Administrator/Programmer
     duties:
@@ -123,8 +123,8 @@ jobs:
   - id: aaas
     name: American Association for the Advancement of Science
     when:
-      start: 2000
-      end: 2001
+      start: June, 2000
+      end: September, 2001
     where: Washington, DC
     title: Technology Specialist
     duties:
@@ -137,8 +137,8 @@ jobs:
   - id: csl
     name: UW-Madison - Computer Science Lab
     when:
-      start: 1998
-      end: 2000
+      start: January, 1998
+      end: June, 2000
     where: Madison, WI
     title: Webmaster, System Administrator/Programmer
     duties:
