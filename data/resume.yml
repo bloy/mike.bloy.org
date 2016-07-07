@@ -90,7 +90,7 @@ jobs:
   - id: alice
     name: Alice.com
     when:
-      start: October, 22011
+      start: October, 2011
       end: April, 2013
     where: Middleton, WI
     title: Developer
