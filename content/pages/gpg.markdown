@@ -1,3 +1,6 @@
+---
+title: GPG Key
+---
 This key can be used to encrypt mail to me. I will verify this in person, or
 you may verify this key using any of the methods available at
 [Keybase.io](https://keybase.io/bloy)

@@ -19,6 +19,12 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '{slug}/index.html'
+
+TAGS_SAVE_AS = ''
+TAG_SAVE_AS = ''
+
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
@@ -30,6 +36,8 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
+
+THEME = 'themes/mike'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

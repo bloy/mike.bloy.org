@@ -1,7 +1,7 @@
 ---
-menu: true
-weight: -1
-link_title: Introduction
+title: Introduction
+URL:
+save_as: index.html
 ---
 I'm Mike Bloy. You either know me, or have heard of me, or Google has dropped
 you here in a freak search engine accident.
