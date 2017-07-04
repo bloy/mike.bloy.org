@@ -30,22 +30,15 @@ AUTHOR_SAVE_AS = ''
 AUTHORS_SAVE_AS = ''
 ARCHIVES_SAVE_AS = ''
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
 # Social widget
 SOCIAL = (
     ('GitHub', 'https://github.com/bloy'),
-    ('Coderwall', 'https://coderwall.com/bloy'),
-    ('LinkedIn', 'http://www.linkedin.com/in/mikebloy'),
+    ('LinkedIn', 'https://www.linkedin.com/in/mikebloy'),
     ('Stack Exchange',
-     'http://stackexchange.com/users/1296619/bloy?tab=accounts'),
+     'https://stackexchange.com/users/1296619/bloy?tab=accounts'),
     ('Google+', 'https://plus.google.com/+MikeBloy/about'),
-    ('Facebook', 'http://www.facebook.com/mbloy'),
-    ('Twitter', 'http://twitter.com/mikebloy'),
+    ('Facebook', 'https://www.facebook.com/mbloy'),
+    ('Twitter', 'https://twitter.com/mikebloy'),
     ('Keybase', 'https://keybase.io/bloy'),
 )
 
