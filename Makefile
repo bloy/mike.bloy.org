@@ -77,8 +77,6 @@ help:
 assets: $(POSTCSS_FILES)
 
 html: 
-	echo $(PRECSS_FILES)
-	echo $(POSTCSS_FILES)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
