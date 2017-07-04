@@ -1,5 +1,6 @@
 PY?=python3
 PELICAN?=pelican
+POSTCSS?=postcss
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
@@ -7,6 +8,15 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+
+POSTCSS_FLAGS=-c $(BASEDIR)/postcss.json \
+	      --no-map \
+	      --use postcss-import \
+	      --use postcss-cssnext
+
+PRECSS_IMPORTS=$(wildcard $(BASEDIR)/themes/mike/static/css/imports/*.css)
+PRECSS_FILES=$(wildcard $(BASEDIR)/themes/mike/static/css/*.pre.css)
+POSTCSS_FILES=$(patsubst %.pre.css,%.css,$(PRECSS_FILES))
 
 FTP_HOST=localhost
 FTP_USER=anonymous
@@ -61,7 +71,14 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-html:
+%.css: %.pre.css $(PRECSS_IMPORTS)
+	@$(POSTCSS) $(POSTCSS_FLAGS) -o $@ $<
+
+assets: $(POSTCSS_FILES)
+
+html: 
+	echo $(PRECSS_FILES)
+	echo $(POSTCSS_FILES)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
@@ -121,4 +138,4 @@ github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 
-.PHONY: html help clean regenerate serve serve-global devserver stopserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
+.PHONY: assets html help clean regenerate serve serve-global devserver stopserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
