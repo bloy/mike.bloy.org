@@ -1,0 +1,130 @@
+@import "imports/normalize.css";
+/*@import "imports/cstest.css";*/
+
+:root {
+  --color-scheme1: #277553; /* main */
+  --color-scheme2: #e5f1ec; /* pale */
+  --color-scheme3: #6daa90; /* medium */
+  --color-scheme4: #023f25; /* dark */
+  --color-scheme5: #000a06; /* text dark */
+  --color-link-text: color(var(--color-scheme4) tint(20%));
+  --color-link-visited-text: color(var(--color-link-text) shade(15%));
+  --color-link-hover-text: var(--color-link-visited-text);
+  --color-content-background: var(--color-scheme2);
+  --color-content-text: var(--color-scheme5);
+  --color-body-background: var(--color-scheme1);
+  --color-header-background: var(--color-scheme4);
+  --color-header-text: var(--color-scheme2);
+  --color-button-background: color(var(--color-scheme3) tint(20%));
+  --color-button-text: var(--color-scheme5);
+  --color-button-hover-background: var(--color-scheme5);
+  --color-button-hover-text: var(--color-scheme2);
+
+  --content-max-width: 80ch;
+  --padding-horizontal: 1em;
+  --padding-vertical: calc(var(--padding-horizontal) / 4);
+  --margin-horizontal: var(--padding-horizontal);
+  --margin-vertical: var(--margin-horizontal);
+  --border-radius: 0.25rem;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--color-body-background);
+}
+
+header.body, nav.body, footer.body, main.body, aside.body {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
+  padding-top: var(--padding-vertical);
+  padding-bottom: var(--padding-vertical);
+}
+
+header.body, footer.body {
+  background-color: var(--color-header-background);
+  color: var(--color-header-text);
+
+  & a {
+    color: var(--color-header-text);
+  }
+}
+
+nav.body, main.body, aside.body {
+  background: var(--color-content-background);
+  color: var(--color-content-text);
+}
+
+main.body a:link {
+  color: var(--color-link-text);
+}
+
+main.body a:visited {
+  color: var(--color-link-visited-text);
+}
+
+main.body a:hover {
+  color: var(--color-link-hover-text);
+}
+
+header.body h1 {
+  margin: 0;
+  & a {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
+}
+
+nav.navlinks ul {
+  display: flex;
+  margin: var(--margin-vertical) 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav.navlinks ul li {
+  margin-right: calc(var(--margin-horizontal) / 2);
+  background-color: var(--color-button-background);
+  color: var(--color-button-text);
+  margin-bottom: var(--margin-vertical);
+}
+
+nav.navlinks ul li a {
+  height: 100%;
+  width: 100%;
+  padding-top: var(--padding-vertical);
+  padding-bottom: var(--padding-vertical);
+  padding-left: calc(var(--padding-horizontal) / 2);
+  padding-right: calc(var(--padding-horizontal) / 2);
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--border-radius);
+}
+
+nav.navlinks ul li a:link,
+nav.navlinks li a:visited {
+  color: var(--color-button-text);
+  background-color: var(--color-button-background);
+  border-color: var(--color-button-background);
+}
+
+nav.navlinks ul li a:focus,
+nav.navlinks ul li a:active,
+nav.navlinks ul li a:hover {
+  color: var(--color-button-hover-text);
+  background-color: var(--color-button-hover-background);
+  border-color: var(--color-button-hover-background);
+}

@@ -4,6 +4,7 @@
     {% block head %}
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main.css">
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
     {% endif %}
@@ -31,11 +32,11 @@
     {% endblock head %}
   </head>
 
-  <body id="index" class="home">
+  <body>
     <header id="banner" class="body">
       <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
     </header><!-- /#banner -->
-    <nav id="menu"><ul>
+    <nav id="menu" class="body navlinks"><ul>
         {% for title, link in MENUITEMS %}
         <li><a href="{{ link }}">{{ title }}</a></li>
         {% endfor %}
@@ -50,13 +51,26 @@
         {% endfor %}
         {% endif %}
         {% endif %}
-    </ul></nav><!-- /#menu -->
-    {% block content %}
-    {% endblock %}
+    </ul></nav>
+    <main id="maincontent" class="body">
+      {% block content %}
+      {% endblock %}
+    </main>
+    <aside id="social" class="body">
+      <nav id="sociallinks" class="navlinks">
+        <ul>
+          {% for link in SOCIAL %}
+          <li class="{{ link[1] }}">
+            <a href="{{ link[2] }}">{{ link[0] }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </aside>
     <footer id="contentinfo" class="body">
       <address id="about" class="vcard body">
-        Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-        which takes great advantage of <a href="http://python.org">Python</a>.
+        Created with <a href="http://getpelican.com/">Pelican</a>, HTML 5, and CSS 3.
+        Source available on <a href="https://github.com/bloy/mike.bloy.org">GitHub</a>.
       </address><!-- /#about -->
     </footer><!-- /#contentinfo -->
   </body>

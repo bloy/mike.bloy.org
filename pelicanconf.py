@@ -32,14 +32,15 @@ ARCHIVES_SAVE_AS = ''
 
 # Social widget
 SOCIAL = (
-    ('GitHub', 'https://github.com/bloy'),
-    ('LinkedIn', 'https://www.linkedin.com/in/mikebloy'),
-    ('Stack Exchange',
+    ('Email', 'email', 'mailto:mike@meat-in-a-tinbloy.org'),
+    ('GitHub', 'github', 'https://github.com/bloy'),
+    ('LinkedIn', 'linkedin', 'https://www.linkedin.com/in/mikebloy'),
+    ('Stack Exchange', 'stackx',
      'https://stackexchange.com/users/1296619/bloy?tab=accounts'),
-    ('Google+', 'https://plus.google.com/+MikeBloy/about'),
-    ('Facebook', 'https://www.facebook.com/mbloy'),
-    ('Twitter', 'https://twitter.com/mikebloy'),
-    ('Keybase', 'https://keybase.io/bloy'),
+    ('Google+', 'gplus', 'https://plus.google.com/+MikeBloy/about'),
+    ('Facebook', 'facebook', 'https://www.facebook.com/mbloy'),
+    ('Twitter', 'twitter', 'https://twitter.com/mikebloy'),
+    ('Keybase', 'keybase', 'https://keybase.io/bloy'),
 )
 
 DEFAULT_PAGINATION = 10

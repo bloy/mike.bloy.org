@@ -1,0 +1,18 @@
+body:before {
+  content: "";
+  display: block;
+  height: 2em;
+  position: relative;
+  z-index: 999;
+  background-image: linear-gradient(to right,
+                                    var(--color-scheme1) 0%,
+                                    var(--color-scheme1) 20%,
+                                    var(--color-scheme2) 20%,
+                                    var(--color-scheme2) 40%,
+                                    var(--color-scheme3) 40%,
+                                    var(--color-scheme3) 60%,
+                                    var(--color-scheme4) 60%,
+                                    var(--color-scheme4) 80%,
+                                    var(--color-scheme5) 80%,
+                                    var(--color-scheme5) 100%);
+}
