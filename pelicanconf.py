@@ -37,8 +37,17 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('GitHub', 'https://github.com/bloy'),
+    ('Coderwall', 'https://coderwall.com/bloy'),
+    ('LinkedIn', 'http://www.linkedin.com/in/mikebloy'),
+    ('Stack Exchange',
+     'http://stackexchange.com/users/1296619/bloy?tab=accounts'),
+    ('Google+', 'https://plus.google.com/+MikeBloy/about'),
+    ('Facebook', 'http://www.facebook.com/mbloy'),
+    ('Twitter', 'http://twitter.com/mikebloy'),
+    ('Keybase', 'https://keybase.io/bloy'),
+)
 
 DEFAULT_PAGINATION = 10
 
