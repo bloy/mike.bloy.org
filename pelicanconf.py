@@ -24,6 +24,11 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 TAGS_SAVE_AS = ''
 TAG_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+ARCHIVES_SAVE_AS = ''
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -44,6 +49,15 @@ PLUGINS = [
     'pelican-md-metayaml',
     'pelican-page-order',
 ]
+
+STATIC_PATHS = [
+    'static',
+]
+EXTRA_PATH_METADATA = {
+    'static/keybase.txt': {'path': 'keybase.txt'},
+    'static/robots.txt': {'path': 'robots.txt'},
+}
+
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
