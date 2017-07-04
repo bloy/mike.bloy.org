@@ -1,5 +1,6 @@
 ---
 title: Resume
+page_order: 110
 resume:
   skills:
     - section: Programming Languages & Frameworks
