@@ -90,12 +90,16 @@ h1, h2, h3, h4, h5, h6 {
 
 nav.navlinks ul {
   display: flex;
-  margin: var(--margin-vertical) 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+}
+
+nav.body ul {
+  margin-top: var(--margin-vertical);
 }
 
 nav.navlinks ul li {
