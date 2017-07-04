@@ -39,5 +39,11 @@ DEFAULT_PAGINATION = 10
 
 THEME = 'themes/mike'
 
+PLUGIN_PATHS = ['plugins']
+PLUGINS = [
+    'pelican-md-metayaml',
+    'pelican-page-order',
+]
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
