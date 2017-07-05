@@ -13,17 +13,13 @@ will degrade gracefully to display its content in any web browser.
 
 The source for this website is [available on Github][source].
 
-Fonts are from [Font Squirrel][fontsquirrel]. The masthead font is [TeX Gyre
-Pagella][fs-pagella], and the body font is [TeX Gyre Adventor][fs-adventor].
-
+Background SVG images are from [Hero Patterns][heropatterns].
 [Webicons][webicons] are from [Fairhead Creative][fairheadcreative], except for
 the [Keybase][keybase] icon, which came directly from Keybase.
 
 [cssnext]: http://cssnext.io/
 [fairheadcreative]: http://fairheadcreative.com
-[fontsquirrel]: http://www.fontsquirrel.com "Font Squirrel"
-[fs-adventor]: http://www.fontsquirrel.com/fonts/TeX-Gyre-Adventor "Font Squirrel: TeX Gyre Adventor"
-[fs-pagella]: http://www.fontsquirrel.com/fonts/TeX-Gyre-Pagella "Font Squirrel: TeX Gyre Pagella"
+[heropatterns]: http://heropatterns.com
 [jquery]: http://jquery.com
 [keybase]: https://keybase.io
 [pelican]: https://getpelican.com
