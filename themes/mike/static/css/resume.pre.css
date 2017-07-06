@@ -1,0 +1,13 @@
+@import "imports/normalize.css";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  background: #fff;
+  color: #000;
+  line-height: 1.2;
+  font-family: "Noticia Text", Georgia, serif;
+}

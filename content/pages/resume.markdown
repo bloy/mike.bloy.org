@@ -1,7 +1,15 @@
 ---
+template: resume
 title: Resume
 page_order: 110
 resume:
+  name:
+    given: Michael
+    family: Bloy
+  contact:
+    email: mike@meat-in-a-tinbloy.org
+    website: http://mike.bloy.org
+  summary: Developer, Sysadmin
   skills:
     - section: Programming Languages & Frameworks
       skills:
@@ -180,12 +188,4 @@ resume:
           url: http://stackoverflow.com/users/1247517/bloy?tab=answers
         - text: SuperUser
           url: http://superuser.com/users/121265/bloy?tab=answers
-        - text: Coderwall
-          url: https://coderwall.com/bloy
-    - section: Significant Work
-      links:
-        - http://mike.bloy.org
-        - http://reeseenvcons.com
-        - https://myforms.wicourts.gov/
-        - https://efiling.wicourts.gov/
 ---
