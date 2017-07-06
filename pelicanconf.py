@@ -41,6 +41,7 @@ SOCIAL = (
     ('Facebook', 'facebook', 'https://www.facebook.com/mbloy'),
     ('Twitter', 'twitter', 'https://twitter.com/mikebloy'),
     ('Keybase', 'keybase', 'https://keybase.io/bloy'),
+    ('GPG Key', 'gpg', '/gpg-key/'),
 )
 
 DEFAULT_PAGINATION = 10
