@@ -1,5 +1,9 @@
 @import "imports/normalize.css";
 
+:root {
+  --default-spacing: 1rem;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -10,4 +14,78 @@ html {
   color: #000;
   line-height: 1.2;
   font-family: "Noticia Text", Georgia, serif;
+}
+
+article.resume {
+  padding: 0 var(--default-spacing);
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0;
+}
+
+header.banner p.summary {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+header.banner dl { margin: 0; }
+
+header.banner dl dt {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+header.banner dl dd {
+  margin: 0;
+  padding-left: 1ch;
+}
+
+header.banner, section.main {
+  padding-bottom: calc(var(--default-spacing) / 1.5);
+  margin-bottom: calc(var(--default-spacing) / 2);
+  border-bottom: thin solid black;
+}
+
+section.main div.section-info {
+  margin-left: var(--default-spacing);
+}
+
+section.main ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section.main p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section#skills ul {
+  margin: 0 0 0 var(--default-spacing);
+  padding: 0;
+  list-style: none;
+}
+
+section#skills ul li {
+  display: inline-block;
+}
+
+section#skills ul li::after {
+  content: ",";
+}
+
+section#skills ul li:last-child::after {
+  content: "";
+}
+
+section.employment {
+  margin-top: calc(var(--default-spacing) / 1.5);
+  padding-top: calc(var(--default-spacing) / 2);
+  border-top: thin solid #ccc;
+  &:first-child {
+    border-top: none;
+  }
 }
