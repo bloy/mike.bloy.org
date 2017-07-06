@@ -13,9 +13,9 @@ will degrade gracefully to display its content in any web browser.
 
 The source for this website is [available on Github][source].
 
-Background SVG images are from [Hero Patterns][heropatterns].
-[Webicons][webicons] are from [Fairhead Creative][fairheadcreative], except for
-the [Keybase][keybase] icon, which came directly from Keybase.
+The SVG images used as backgrounds are from [Hero Patterns][heropatterns].  The
+social [Webicons][webicons] are from [Fairhead Creative][fairheadcreative],
+except for the [Keybase][keybase] icon, which came directly from Keybase.
 
 [cssnext]: http://cssnext.io/
 [fairheadcreative]: http://fairheadcreative.com
