@@ -1,6 +1,6 @@
 PY?=python3
 PELICAN?=pelican
-POSTCSS?=postcss
+POSTCSS?=node_modules/.bin/postcss
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
