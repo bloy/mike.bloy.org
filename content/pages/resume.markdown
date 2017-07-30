@@ -15,19 +15,20 @@ resume:
       skills:
         - "Python"
         - "Django"
+        - "Flask"
+        - "SQL"
         - "Ruby"
         - "Rails"
         - "Javascript"
         - "JQuery"
         - "Java (JEE, JSP, EJB, Servlets)"
         - "PHP"
-        - "SQL"
 
     - section: Presentation Languages
       skills:
         - "HTML"
         - "CSS"
-        - "Sass/scss"
+        - "SASS/SCSS"
         - "XML"
         - "LaTeX"
 
@@ -81,10 +82,14 @@ resume:
         start: October, 2015
         end: present
       where: Madison, WI
-      title: Sr. Software Engineer
+      title: Lead Software Engineer
       duties:
         - Develop and maintain applications related to system integration
         - Provide expertise on Python development and Linux devops
+        - Provide estimates and design for enhancements and new software
+        - Mentor and delegate other software engineers
+        - Act as a Team Lead for project work
+        - Take part in on-call rotation for support notifications
 
     - id: ccap
       name: State of Wisconsin Court System (Omni Resources)
