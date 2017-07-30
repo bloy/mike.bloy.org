@@ -473,6 +473,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0;
 }
 
+header.banner h1 {
+  font-weight: normal;
+}
+
 header.banner p.summary {
   font-size: 1.3em;
   margin: 0;
@@ -543,4 +547,137 @@ section.employment {
 
 section.employment:first-child {
   border-top: none;
+}
+
+section.employment p.date-range {
+  font-style: italic;
+}
+
+section.employment p.title {
+  font-weight: bold;
+}
+
+@media (max-width: 30em) {
+  header.banner {
+    text-align: center;
+  }
+
+  header.banner dl {
+    font-size: 90%;
+    display: inline-block;
+  }
+
+  header.banner dl dt {
+    clear: both;
+    float: left;
+  }
+
+  header.banner dl dd {
+    padding-left: 1ch;
+    float: right;
+  }
+  @supports(display: inline-grid) {
+    header.banner dl {
+      margin: 0 auto;
+      display: inline-grid;
+      grid-template-columns: -webkit-min-content min-content;
+      grid-template-columns: min-content min-content;
+      grid-gap: 0 1ch;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    header.banner dl dd {
+      padding-left: 0;
+      justify-self: end;
+    }
+
+    header.banner dl dt {
+      justify-self: start;
+    }
+  }
+}
+
+@media (min-width: 30em) {
+  header.banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  header.banner div.contact {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+
+  header.banner dl {
+    display: inline-block;
+  }
+
+  header.banner dl dt {
+    clear: both;
+    float: left;
+  }
+
+  header.banner dl dd {
+    padding-left: 1ch;
+    float: right;
+  }
+
+  @supports(display: grid) {
+    header.banner {
+      display: grid;
+      grid-template-columns: -webkit-max-content minmax(-webkit-min-content, 1fr);
+      grid-template-columns: max-content minmax(min-content, 1fr);
+    }
+
+    header.banner div.contact {
+      -ms-flex-item-align: end;
+          align-self: end;
+      justify-self: end;
+    }
+
+    header.banner dl {
+      display: grid;
+      grid-gap: 0 1ch;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      grid-template-columns: -webkit-min-content min-content;
+      grid-template-columns: min-content min-content;
+    }
+
+    header.banner dl dd {
+      padding-left: 0;
+      justify-self: end;
+    }
+  }
+}
+
+@media (min-width: 45em) {
+  article.resume {
+    max-width: 45em;
+  }
+
+  header.banner h1 {
+    font-size: 2.5em;
+    letter-spacing: 0.05em;
+  }
+
+  header.banner p.summary {
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+  }
+
+  header.banner dl {
+    font-size: 1.2em;
+  }
 }
