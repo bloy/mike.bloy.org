@@ -76,7 +76,7 @@ help:
 
 assets: $(POSTCSS_FILES)
 
-html: 
+html: assets
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
