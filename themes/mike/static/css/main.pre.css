@@ -137,6 +137,60 @@ nav.navlinks ul li a:hover {
   border-color: var(--color-button-hover-background);
 }
 
+@custom-selector :--sociallink aside.body nav.navlinks ul li;
+
+:--sociallink a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:--sociallink a::before {
+  content: " ";
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1.3em;
+  width: 1.3em;
+  margin-right: calc(var(--padding-horizontal) / 2);
+}
+
+:--sociallink.email a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-mail.svg'---);
+}
+
+:--sociallink.github a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-github.svg'---);
+}
+
+:--sociallink.linkedin a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-linkedin.svg'---);
+}
+
+:--sociallink.stackx a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-stackoverflow.svg'---);
+}
+
+:--sociallink.gplus a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-googleplus.svg'---);
+}
+
+:--sociallink.facebook a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-facebook.svg'---);
+}
+
+:--sociallink.twitter a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-twitter.svg'---);
+}
+
+:--sociallink.keybase a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-keybase.svg'---);
+}
+
+:--sociallink.gpg a::before {
+  background-image: url(b64---'themes/mike/static/images/social/webicon-gpg.svg'---);
+  margin-right: calc(var(--padding-horizontal) / 4);
+}
+
 main > h1 {
   margin-top: 0;
 }

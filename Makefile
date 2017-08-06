@@ -12,6 +12,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 POSTCSS_FLAGS=-c $(BASEDIR)/postcss.json \
 	      --no-map \
 	      --use postcss-import \
+	      --use postcss-inline-base64 \
 	      --use postcss-cssnext
 
 PRECSS_IMPORTS=$(wildcard $(BASEDIR)/themes/mike/static/css/imports/*.css)

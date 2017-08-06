@@ -1,5 +1,6 @@
 __pycache__
-pelican.pid
-srv.pid
-output
-node_modules
+/pelican.pid
+/srv.pid
+/output
+/node_modules
+/.base64-cache
