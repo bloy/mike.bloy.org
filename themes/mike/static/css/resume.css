@@ -559,6 +559,10 @@ section.employment p.title {
   font-weight: bold;
 }
 
+footer.main span.name::after {
+  content: " \2014";
+}
+
 @media (max-width: 30em) {
   header.banner {
     text-align: center;
@@ -598,6 +602,10 @@ section.employment p.title {
     header.banner dl dt {
       justify-self: start;
     }
+  }
+
+  footer.main {
+    text-align: center;
   }
 }
 
@@ -661,6 +669,26 @@ section.employment p.title {
       padding-left: 0;
       justify-self: end;
     }
+  }
+
+  footer.main span.name::after {
+    content: "";
+  }
+
+  footer.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 

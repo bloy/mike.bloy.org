@@ -108,6 +108,10 @@ section.employment p.title {
   font-weight: bold;
 }
 
+footer.main span.name::after {
+  content: " \2014";
+}
+
 @media (--small-viewport) {
   header.banner {
     text-align: center;
@@ -144,6 +148,10 @@ section.employment p.title {
     header.banner dl dt {
       justify-self: start;
     }
+  }
+
+  footer.main {
+    text-align: center;
   }
 }
 
@@ -194,6 +202,17 @@ section.employment p.title {
       padding-left: 0;
       justify-self: end;
     }
+  }
+
+  footer.main span.name::after {
+    content: "";
+  }
+
+  footer.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
