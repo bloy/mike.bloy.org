@@ -43,6 +43,7 @@ resume:
         - "SOAP"
         - "REST"
         - "CGI"
+        - "AMQP"
         - "SSL"
         - "IMAP"
         - "POP"
@@ -56,8 +57,8 @@ resume:
     - section: Software
       skills:
         - "Vim"
-        - "Subversion"
         - "Git"
+        - "Subversion"
         - "Ansible"
         - "Docker"
         - "MySQL"
@@ -74,6 +75,7 @@ resume:
         - "Archiva"
         - "JIRA"
         - "Confluence"
+        - "RabbitMQ"
 
   jobs:
     - id: tds2
@@ -85,11 +87,11 @@ resume:
       title: Lead Software Engineer
       duties:
         - Develop and maintain applications related to system integration
+        - Support and maintain RabbitMQ servers
+        - Support legacy Java and proprietary Oracle integration software
         - Provide expertise on Python development and Linux devops
         - Provide estimates and design for enhancements and new software
-        - Mentor and delegate other software engineers
-        - Act as a Team Lead for project work
-        - Take part in on-call rotation for support notifications
+        - Mentor and delegate to other software engineers
 
     - id: ccap
       name: State of Wisconsin Court System (Omni Resources)
