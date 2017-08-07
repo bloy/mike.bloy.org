@@ -5,10 +5,10 @@ weight: 10
 page_order: 120
 ---
 This site was written by hand in [VIM][vim], and designed directly in the
-browser. It uses [jQuery][jquery] for behavior, but does not require javascript
-to access the content of the site. It will look best in a modern browser, but
-will degrade gracefully to display its content in any web browser.
-[PostCSS][postcss] and [CSSNext][cssnext] were used to managed the CSS, and
+browser. It uses javascript for behavior, but does not require javascript to
+access the content of the site. It will look best in a modern browser, but will
+degrade gracefully to display its content in any web browser.
+[PostCSS][postcss] and [CSSNext][cssnext] were used to manage the CSS, and
 [Pelican][pelican] generated the html from templates and markdown.
 
 The source for this website is [available on Github][source].
