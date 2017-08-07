@@ -33,46 +33,48 @@
   </head>
 
   <body>
-    <header id="banner" class="body">
-      <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
-    </header><!-- /#banner -->
-    <nav id="menu" class="body navlinks"><ul>
-        {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}
-        {% for p in pages|sort(attribute='page_order') %}
-        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}
-        {% else %}
-        {% if DISPLAY_CATEGORIES_ON_MENU %}
-        {% for cat, null in categories %}
-        <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-        {% endfor %}
-        {% endif %}
-        {% endif %}
-    </ul></nav>
-    <main id="maincontent" class="body">
-      {% block content %}
-      {% endblock %}
-    </main>
-    <aside id="social" class="body">
-      <nav id="sociallinks" class="navlinks">
-        <ul>
-          {% for link in SOCIAL %}
-          <li class="{{ link[1] }}">
-            <a href="{{ link[2] }}">{{ link[0] }}</a>
-          </li>
+    <div class="page">
+      <header id="banner" class="body">
+        <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+      </header><!-- /#banner -->
+      <nav id="menu" class="body navlinks"><ul>
+          {% for title, link in MENUITEMS %}
+          <li><a href="{{ link }}">{{ title }}</a></li>
           {% endfor %}
-        </ul>
-      </nav>
-    </aside>
-    <footer id="contentinfo" class="body">
-      <address id="about" class="vcard body">
-        Created with <a href="http://getpelican.com/">Pelican</a>, HTML 5, and CSS 3.
-        Source available on <a href="https://github.com/bloy/mike.bloy.org">GitHub</a>.
-      </address><!-- /#about -->
-    </footer><!-- /#contentinfo -->
+          {% if DISPLAY_PAGES_ON_MENU %}
+          {% for p in pages|sort(attribute='page_order') %}
+          <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+          {% else %}
+          {% if DISPLAY_CATEGORIES_ON_MENU %}
+          {% for cat, null in categories %}
+          <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+          {% endfor %}
+          {% endif %}
+          {% endif %}
+      </ul></nav>
+      <main id="maincontent" class="body">
+        {% block content %}
+        {% endblock %}
+      </main>
+      <aside id="social" class="body">
+        <nav id="sociallinks" class="navlinks">
+          <ul>
+            {% for link in SOCIAL %}
+            <li class="{{ link[1] }}">
+              <a href="{{ link[2] }}">{{ link[0] }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </aside>
+      <footer id="contentinfo" class="body">
+        <address id="about" class="vcard body">
+          Created with <a href="http://getpelican.com/">Pelican</a>, HTML 5, and CSS 3.
+          Source available on <a href="https://github.com/bloy/mike.bloy.org">GitHub</a>.
+        </address><!-- /#about -->
+      </footer><!-- /#contentinfo -->
+    </div>
     <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/antispam.js"></script>
   </body>
 </html>
