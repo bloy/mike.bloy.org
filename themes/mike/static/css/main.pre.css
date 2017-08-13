@@ -19,6 +19,7 @@
   --color-button-text: var(--color-scheme5);
   --color-button-hover-background: var(--color-scheme5);
   --color-button-hover-text: var(--color-scheme2);
+  --color-page-border: var(--color-scheme4);
 
   --content-max-width: 55em;
   --padding-horizontal: 1em;
@@ -26,6 +27,7 @@
   --margin-horizontal: var(--padding-horizontal);
   --margin-vertical: var(--margin-horizontal);
   --border-radius: 0.25rem;
+  --border-page: 1px solid var(--color-page-border);
 }
 
 
@@ -206,12 +208,10 @@ nav.navlinks ul li a:hover {
     margin: 1em;
   }
 
-  header.body {
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-  }
-
-  footer.body {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  div.page {
+    border-radius: var(--border-radius);
+    border: var(--border-page);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
   }
 
   @supports(display: grid) {
