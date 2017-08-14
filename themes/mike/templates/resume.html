@@ -1,0 +1,128 @@
+{# vim: set ft=htmldjango: #}
+<!doctype html>
+{% set resume = page.metadata.resume %}
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{{ resume.name.given }} {{ resume.name.family }} - Resume</title>
+    <meta name="author" content="Michael Bloy" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700'
+    rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/resume.css" type="text/css">
+  </head>
+  <body role="document">
+    <article class="resume h-resume">
+      <header role="banner" class="banner p-contact h-card">
+        <div>
+          <h1 class="p-name">
+            <span class="p-given-name">{{ resume.name.given }}</span>
+            <span class="p-family-name">{{ resume.name.family }}</span>
+          </h1>
+          <p class="summary p-summary">{{ resume.summary }}</p>
+        </div>
+        <div class="contact">
+          <dl>
+            {% if resume.contact.phone %}
+            <dt>Phone</dt>
+            <dd class="p-tel">{{ resume.contact.phone }}</dd>
+            {% endif %}
+            {% if resume.contact.email %}
+            <dt>Email</td>
+            <dd>
+              <a class="u-email" href="mailto:{{ resume.contact.email }}">{{ resume.contact.email }}</a>
+            </dd>
+            {% endif %}
+            {% if resume.contact.website %}
+            <dt>Website</dt>
+            <dd>
+              <a class="u-url" href="{{resume.contact.website }}">{{resume.contact.website}}</a>
+            </dd>
+            {% endif %}
+          </dl>
+        </div>
+      </header>
+      <section class="main" id="skills">
+        <h2>Skills</h2>
+        <div class="section-info">
+          {% for skillset in resume.skills %}
+          <section class="skillset">
+            <h3>{{ skillset.section }}</h3>
+            <ul class="skillset">
+              {% for skill in skillset.skills %}
+              <li class="p-skill">{{ skill }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+          {% endfor %}
+        </div>
+      </section>
+      <section class="main" id="employment">
+        <h2>Employment</h2>
+        <div class="section-info">
+          {% for job in resume.jobs %}
+          <section class="employment p-experience h-event" id="employment-{{ job.id }}">
+            <div class="h-card jobhead">
+              <h3 class="p-name">{{ job.name }}</h3>
+              <p class="town p-location">{{ job.where }}</p>
+              <p class="date-range">
+                <span class="range-start dt-start">{{ job.when.start }}</span>
+                &ndash;
+                <span class="range-end dt-end">{{ job.when.end }}</span>
+              </p>
+              <p class="title p-job-title p-role">{{ job.title }}</p>
+            </div>
+            <ul class="duties p-description">
+              {% for duty in job.duties %}
+              <li>{{ duty }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+          {% endfor %}
+        </div>
+      </section>
+      <section class="main" id="education">
+        <h2>Education</h2>
+        <div class="section-info">
+          {% for school in resume.education %}
+          <section class="education p-education h-event" id="education-{{ school.id }}">
+            <div class="h-card schoolhead">
+              <h3 class="p-location">{{ school.where }}</h3>
+              <p class="degree p-description">{{ school.degree }}</p>
+            </div>
+            <ul class="duties p-description">
+              {% for extra in school.extra %}
+              <li>{{ extra }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+          {% endfor %}
+        </div>
+      </section>
+      <section class="main" id="links">
+        <h2>Links</h2>
+        <div class="section-info">
+          {% for section in resume.links %}
+          <section>
+            <h3>{{ section.section }}</h3>
+            <ul>
+              {% for link in section.links %}
+              <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+              {% endfor %}
+            </ul>
+          </section>
+          {% endfor %}
+        </div>
+      </section>
+      <footer class="main" role="complementary">
+        <span class="name">{{ resume.name.given }} {{ resume.name.family }}</span>
+        <span class="email">
+          <a href="mailto:{{ resume.contact.email }}">{{ resume.contact.email }}</a>
+        </span>
+      </footer>
+    </article>
+    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/antispam.js"></script>
+  </body>
+</html>

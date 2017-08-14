@@ -1,7 +1,6 @@
-/bin
-.sass-cache
-/build
-/build.tar.gz
-/source/images/icon-*.png
-/.bundle
-/.env
+__pycache__
+/pelican.pid
+/srv.pid
+/output
+/node_modules
+/.base64-cache
