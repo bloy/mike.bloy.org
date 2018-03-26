@@ -4,3 +4,4 @@ __pycache__
 /output
 /node_modules
 /.base64-cache
+/Makefile.local
