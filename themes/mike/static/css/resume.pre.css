@@ -1,4 +1,5 @@
 @import "imports/normalize.css";
+@import "noticia-text-font.css";
 
 :root {
   --default-spacing: 1rem;
