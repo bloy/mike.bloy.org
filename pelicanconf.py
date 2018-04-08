@@ -30,20 +30,6 @@ AUTHOR_SAVE_AS = ''
 AUTHORS_SAVE_AS = ''
 ARCHIVES_SAVE_AS = ''
 
-# Social widget
-SOCIAL = (
-    ('Email', 'email', 'mailto:mike@meat-in-a-tinbloy.org'),
-    ('GitHub', 'github', 'https://github.com/bloy'),
-    ('LinkedIn', 'linkedin', 'https://www.linkedin.com/in/mikebloy'),
-    ('Stack Exchange', 'stackx',
-     'https://stackexchange.com/users/1296619/bloy?tab=accounts'),
-    ('Google+', 'gplus', 'https://plus.google.com/+MikeBloy/about'),
-    ('Facebook', 'facebook', 'https://www.facebook.com/mbloy'),
-    ('Twitter', 'twitter', 'https://twitter.com/mikebloy'),
-    ('Keybase', 'keybase', 'https://keybase.io/bloy'),
-    ('GPG Key', 'gpg', '/gpg-key.html'),
-)
-
 DEFAULT_PAGINATION = 10
 
 THEME = 'themes/mike'
@@ -55,7 +41,7 @@ PLUGINS = [
 ]
 
 STATIC_PATHS = [
-    'static',
+    'images',
 ]
 EXTRA_PATH_METADATA = {
     'static/keybase.txt': {'path': 'keybase.txt'},

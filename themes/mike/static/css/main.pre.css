@@ -145,63 +145,8 @@ nav.navlinks ul li a:hover {
   border-color: var(--color-button-hover-background);
 }
 
-@custom-selector :--sociallink aside.body nav.navlinks ul li;
-
-:--sociallink a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-:--sociallink a::before {
-  content: " ";
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 1.3em;
-  width: 1.3em;
-  margin-right: calc(var(--padding-horizontal) / 2);
-}
-
-:--sociallink.email a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-mail.svg'---);
-}
-
-:--sociallink.github a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-github.svg'---);
-}
-
-:--sociallink.linkedin a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-linkedin.svg'---);
-}
-
-:--sociallink.stackx a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-stackoverflow.svg'---);
-}
-
-:--sociallink.gplus a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-googleplus.svg'---);
-}
-
-:--sociallink.facebook a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-facebook.svg'---);
-}
-
-:--sociallink.twitter a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-twitter.svg'---);
-}
-
-:--sociallink.keybase a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-keybase.svg'---);
-}
-
-:--sociallink.gpg a::before {
-  background-image: url(b64---'themes/mike/static/images/social/webicon-gpg.svg'---);
-  margin-right: calc(var(--padding-horizontal) / 4);
-}
-
-@custom-media --small-viewport screen and (max-width: 30em);
-@custom-media --notsmall-viewport screen and (min-width: 30em);
-@custom-media --large-viewport screen and (min-width: 45em);
+@custom-media --small-viewport screen and (max-width: 40em);
+@custom-media --notsmall-viewport screen and (min-width: 40em);
 
 @media (--notsmall-viewport) {
   body {
@@ -224,16 +169,14 @@ nav.navlinks ul li a:hover {
       grid-column: 1 / -1;
     }
 
-    nav.body {
-      grid-row: span 2;
-    }
-
     main.body {
       padding-left: 0;
     }
 
     nav.body ul {
       display: grid;
+      margin-top: var(--padding-vertical);
+      margin-bottom: var(--padding-vertical);
       grid-template-columns: min-content;
       grid-template-rows: min-content;
       grid-gap: calc(var(--margin-vertical) / 2);
@@ -242,32 +185,5 @@ nav.navlinks ul li a:hover {
     nav.body ul li a {
       margin: 0;
     }
-  }
-}
-
-@media (--large-viewport) {
-  @supports(display: grid) {
-    div.page {
-      grid-template-columns: min-content 1fr min-content;
-    }
-
-    nav.body {
-      grid-row: span 1;
-    }
-  }
-
-  main.body {
-    padding-right: 0;
-  }
-
-  aside.body nav.navlinks ul {
-    display: grid;
-    grid-template-columns: min-content;
-    grid-template-rows: min-content;
-    grid-gap: calc(var(--margin-vertical) / 2);
-  }
-
-  nav.body ul li a {
-    margin: 0;
   }
 }
