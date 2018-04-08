@@ -31,6 +31,8 @@ resume:
         - "SASS/SCSS"
         - "XML"
         - "LaTeX"
+        - Markdown
+        - REstructured Text and Sphinx
 
     - section: Operating Systems
       skills:
@@ -72,7 +74,6 @@ resume:
         - "Ant"
         - "Maven"
         - "Jenkins"
-        - "Archiva"
         - "JIRA"
         - "Confluence"
         - "RabbitMQ"
