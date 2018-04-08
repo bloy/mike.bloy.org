@@ -579,6 +579,61 @@ nav.navlinks ul li a:hover {
   border-color: #000a06;
 }
 
+ul.contacts {
+  list-style: none;
+  padding-left: 0
+
+}
+
+ul.contacts > li.contact {
+  margin-bottom: 0.5em;
+}
+
+ul.contacts > li.contact > a::before {
+  content: " ";
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: auto 1.5em;
+  vertical-align: text-bottom;
+  margin-right: 0.5em;
+}
+
+ul.contacts > li.contact.mail > a::before {
+  background-image: url(../images/social/webicon-mail.svg);
+}
+
+ul.contacts > li.contact.github > a::before {
+  background-image: url(../images/social/webicon-github.svg);
+}
+
+ul.contacts > li.contact.linkedin > a::before {
+  background-image: url(../images/social/webicon-linkedin.svg);
+}
+
+ul.contacts > li.contact.stackoverflow > a::before {
+  background-image: url(../images/social/webicon-stackoverflow.svg);
+}
+
+ul.contacts > li.contact.facebook > a::before {
+  background-image: url(../images/social/webicon-facebook.svg);
+}
+
+ul.contacts > li.contact.twitter > a::before {
+  background-image: url(../images/social/webicon-twitter.svg);
+}
+
+ul.contacts > li.contact.keybase > a::before {
+  background-image: url(../images/social/webicon-keybase.svg);
+}
+
+ul.contacts > li.contact.gpg > a::before {
+  background-image: url(../images/social/webicon-gpg.svg);
+  background-position: top 0 left 0.2em;
+}
+
 @media screen and (min-width: 40em) {
   body {
     margin: 1em;

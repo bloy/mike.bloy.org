@@ -1,0 +1,13 @@
+{% extends "page.html" %}
+{% set social = page.metadata.social %}
+{% block pageextra %}
+
+<ul class="contacts">
+{% for item in page.metadata.social %}
+  <li class="contact {{ item.name }}">
+    <a href="{{ item.link }}">{{ item.text }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

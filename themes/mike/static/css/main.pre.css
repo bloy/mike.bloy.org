@@ -145,6 +145,61 @@ nav.navlinks ul li a:hover {
   border-color: var(--color-button-hover-background);
 }
 
+ul.contacts {
+  list-style: none;
+  padding-left: 0;
+
+  & > li.contact {
+    margin-bottom: calc(var(--margin-vertical) / 2);
+
+    & > a::before {
+      content: " ";
+      height: 1.5em;
+      width: 1.5em;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: auto 1.5em;
+      vertical-align: text-bottom;
+      margin-right: calc(var(--padding-horizontal) / 2);
+    }
+
+    &.mail > a::before {
+      background-image: url(../images/social/webicon-mail.svg);
+    }
+
+    &.github > a::before {
+      background-image: url(../images/social/webicon-github.svg);
+    }
+
+    &.linkedin > a::before {
+      background-image: url(../images/social/webicon-linkedin.svg);
+    }
+
+    &.stackoverflow > a::before {
+      background-image: url(../images/social/webicon-stackoverflow.svg);
+    }
+
+    &.facebook > a::before {
+      background-image: url(../images/social/webicon-facebook.svg);
+    }
+
+    &.twitter > a::before {
+      background-image: url(../images/social/webicon-twitter.svg);
+    }
+
+    &.keybase > a::before {
+      background-image: url(../images/social/webicon-keybase.svg);
+    }
+
+    &.gpg > a::before {
+      background-image: url(../images/social/webicon-gpg.svg);
+      background-position: top 0 left 0.2em;
+    }
+  }
+
+}
+
 @custom-media --small-viewport screen and (max-width: 40em);
 @custom-media --notsmall-viewport screen and (min-width: 40em);
 

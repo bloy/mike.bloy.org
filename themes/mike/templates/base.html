@@ -60,17 +60,6 @@
         {% block content %}
         {% endblock %}
       </main>
-      <aside id="social" class="body">
-        <nav id="sociallinks" class="navlinks">
-          <ul>
-            {% for link in SOCIAL %}
-            <li class="{{ link[1] }}">
-              <a href="{{ link[2] }}">{{ link[0] }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </nav>
-      </aside>
       <footer id="contentinfo" class="body">
         <address id="about" class="vcard body">
           Created with <a href="http://getpelican.com/">Pelican</a>, HTML 5, and CSS 3.
