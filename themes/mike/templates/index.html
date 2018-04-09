@@ -1,28 +1,53 @@
 {% extends "base.html" %}
+{% block title %}{{ SITENAME }}: All Articles{% endblock %}
 {% block content %}
-<section id="content">
-  {% block content_title %}
-  <h2>All articles</h2>
-  {% endblock %}
 
-  <ol id="post-list">
-    {% for article in articles_page.object_list %}
-    <li><article class="hentry">
-        <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-        <footer class="post-info">
-          <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-          <address class="vcard author">By
-            {% for author in article.authors %}
-            <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-            {% endfor %}
-          </address>
-        </footer><!-- /.post-info -->
-        <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-    </article></li>
-    {% endfor %}
-  </ol><!-- /#posts-list -->
-  {% if articles_page.has_other_pages() %}
-  {% include 'pagination.html' %}
-  {% endif %}
-</section><!-- /#content -->
+{% block content_title %}{% endblock %}
+
+
+{% for article in articles_page.object_list %}
+<section class="articles">
+<article class="hentry">
+  <header>
+    <h2 class="entry-title">
+      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+    </h2>
+    <dl class="post-info">
+      {% if article.date %}
+      <dt>Published:</dt>
+      <dd>
+        <time class="published" datetime="{{ article.date.isoformat() }}">
+          {{ article.locale_date }}
+        </time>
+      </dd>
+      {% endif %}
+      {% if article.category %}
+      <dt>Category:</dt>
+      <dd>
+        <a href="{{ article.category.url }}">{{ article.category.name }}</a>
+      </dd>
+      {% endif %}
+      {% if article.tags %}
+      <dt>Tags:</dt>
+      <dd>
+        <ul class="article-tags">
+          {% for tag in article.tags %}
+          <li>
+            <a href="{{ tag.url }}">{{ tag.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+    </dl>
+  </header>
+  <section class="entry-content">
+    {{ article.summary }}
+  </section>
+</article>
+</section>
+{% endfor %}
+{% if articles_page.has_other_pages() %}
+{% include 'pagination.html' %}
+{% endif %}
 {% endblock content %}

@@ -634,6 +634,49 @@ ul.contacts > li.contact.gpg > a::before {
   background-position: top 0 left 0.2em;
 }
 
+article.body > header > h1,
+    article.body > header > h2:first-child,
+    article.hentry:first-child > header > h1,
+    article.hentry:first-child > header > h2:first-child {
+  margin-top: 0;
+}
+
+article.body > header > h1 a, article.body > header > h2:first-child a, article.hentry:first-child > header > h1 a, article.hentry:first-child > header > h2:first-child a {
+  text-decoration: none;
+}
+
+dl.post-info {
+  display: block;
+  font-size: smaller;
+  border-bottom: thin solid #000a06
+}
+
+dl.post-info > dd, dl.post-info > dt {
+  display: inline-block;
+}
+
+dl.post-info > dt {
+  font-weight: bold;
+}
+
+dl.post-info > dd {
+  margin-left: 0;
+}
+
+dl.post-info a {
+  text-decoration: none;
+}
+
+dl.post-info ul.article-tags {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0;
+}
+
+dl.post-info ul.article-tags > li {
+  display: inline-block;
+}
+
 @media screen and (min-width: 40em) {
   body {
     margin: 1em;

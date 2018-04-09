@@ -200,6 +200,52 @@ ul.contacts {
 
 }
 
+article.body,
+article.hentry:first-child {
+  & > header {
+    & > h1,
+    & > h2:first-child {
+      margin-top: 0;
+
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+dl.post-info {
+  display: block;
+  font-size: smaller;
+  border-bottom: thin solid var(--color-content-text);
+
+  & > dd, & > dt {
+    display: inline-block;
+  }
+
+  & > dt {
+    font-weight: bold;
+  }
+
+  & > dd {
+    margin-left: 0;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+  & ul.article-tags {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+
+    & > li {
+      display: inline-block;
+    }
+  }
+}
+
 @custom-media --small-viewport screen and (max-width: 40em);
 @custom-media --notsmall-viewport screen and (min-width: 40em);
 

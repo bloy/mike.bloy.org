@@ -40,7 +40,8 @@
       <header id="banner" class="body">
         <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
       </header><!-- /#banner -->
-      <nav id="menu" class="body navlinks"><ul>
+      <nav id="menu" class="body navlinks">
+        <ul>
           {% for title, link in MENUITEMS %}
           <li><a href="{{ link }}">{{ title }}</a></li>
           {% endfor %}
@@ -55,7 +56,8 @@
           {% endfor %}
           {% endif %}
           {% endif %}
-      </ul></nav>
+        </ul>
+      </nav>
       <main id="maincontent" class="body">
         {% block content %}
         {% endblock %}
