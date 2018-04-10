@@ -48,6 +48,7 @@ PLUGINS = [
 ]
 
 STATIC_PATHS = [
+    'static',
     'images',
 ]
 EXTRA_PATH_METADATA = {
