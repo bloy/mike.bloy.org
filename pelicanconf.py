@@ -47,6 +47,7 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'pelican-md-metayaml',
     'pelican-page-order',
+    'summary',
 ]
 
 STATIC_PATHS = [
