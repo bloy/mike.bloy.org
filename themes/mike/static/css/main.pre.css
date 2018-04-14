@@ -20,6 +20,8 @@
   --color-button-hover-background: var(--color-scheme5);
   --color-button-hover-text: var(--color-scheme2);
   --color-page-border: var(--color-scheme4);
+  --color-article-border: var(--color-scheme3);
+  --color-article-info-border: var(--color-content-text);
 
   --content-max-width: 55em;
   --padding-horizontal: 1em;
@@ -197,19 +199,30 @@ ul.contacts {
       background-position: top 0 left 0.2em;
     }
   }
-
 }
 
-article.body,
-article.hentry:first-child {
-  & > header {
-    & > h1,
-    & > h2:first-child {
-      margin-top: 0;
+article.body {
+  & > header > h1 {
+    margin-top: 0;
+    & > a {
+      text-decoration: none;
+    }
+  }
+}
 
-      & a {
-        text-decoration: none;
-      }
+article.hentry {
+  border-top: thin solid var(--color-article-border);
+  margin-bottom: var(--margin-vertical);
+
+  & > header > h2 > a {
+    text-decoration: none;
+  }
+
+  &:first-child {
+    border-top: none;
+
+    & > header > h2 {
+      margin-top: 0;
     }
   }
 }
@@ -217,7 +230,7 @@ article.hentry:first-child {
 dl.post-info {
   display: block;
   font-size: smaller;
-  border-bottom: thin solid var(--color-content-text);
+  border-bottom: thin solid var(--color-article-info-border);
 
   & > dd, & > dt {
     display: inline-block;

@@ -582,7 +582,6 @@ nav.navlinks ul li a:hover {
 ul.contacts {
   list-style: none;
   padding-left: 0
-
 }
 
 ul.contacts > li.contact {
@@ -634,15 +633,29 @@ ul.contacts > li.contact.gpg > a::before {
   background-position: top 0 left 0.2em;
 }
 
-article.body > header > h1,
-    article.body > header > h2:first-child,
-    article.hentry:first-child > header > h1,
-    article.hentry:first-child > header > h2:first-child {
+article.body > header > h1 {
   margin-top: 0;
 }
 
-article.body > header > h1 a, article.body > header > h2:first-child a, article.hentry:first-child > header > h1 a, article.hentry:first-child > header > h2:first-child a {
+article.body > header > h1 > a {
   text-decoration: none;
+}
+
+article.hentry {
+  border-top: thin solid #6daa90;
+  margin-bottom: 1em
+}
+
+article.hentry > header > h2 > a {
+  text-decoration: none;
+}
+
+article.hentry:first-child {
+  border-top: none;
+}
+
+article.hentry:first-child > header > h2 {
+  margin-top: 0;
 }
 
 dl.post-info {
