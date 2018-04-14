@@ -37,6 +37,8 @@ YEAR_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/index.html'
 INDEX_SAVE_AS = 'index.html'
 
+RSS_FEED_SUMMARY_ONLY = False
+
 DEFAULT_PAGINATION = 10
 
 THEME = 'themes/mike'
