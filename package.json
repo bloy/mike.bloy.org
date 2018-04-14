@@ -8,8 +8,7 @@
     "postcss": "^6.0.8",
     "postcss-cli": "^4.1.0",
     "postcss-cssnext": "^3.0.2",
-    "postcss-import": "^10.0.0",
-    "postcss-inline-base64": "^2.2.1"
+    "postcss-import": "^10.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
