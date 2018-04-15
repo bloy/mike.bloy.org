@@ -47,12 +47,13 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'pelican-md-metayaml',
     'pelican-page-order',
+    'photos',
     'summary',
 ]
 
 STATIC_PATHS = [
-    'static',
     'images',
+    'static',
 ]
 EXTRA_PATH_METADATA = {
     'static/keybase.txt': {'path': 'keybase.txt'},
@@ -60,6 +61,11 @@ EXTRA_PATH_METADATA = {
 }
 
 DEFAULT_PAGINATION = 10
+
+PHOTO_LIBRARY = "~/web_albums"
+
+PHOTO_EXIF_COPYRIGHT_AUTHOR = 'Mike Bloy'
+PHOTO_EXIF_COPYRIGHT = 'COPYRIGHT'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
