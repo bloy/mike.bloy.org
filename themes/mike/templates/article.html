@@ -53,20 +53,23 @@
     {{ article.content }}
 
     {% if article.photo_gallery %}
-    <div class="gallery">
+    <section class="galleries">
       {% for title, gallery in article.photo_gallery %}
       <h2 class="gallerytitle">{{ title }}</h2>
-      {% for name, photo, thumb, exif, caption in gallery %}
-      <div class="figure">
-        <a href="{{ SITEURL }}/{{ photo }}"
-          title="{{ name }}"
-          exif="{{ exif }}"
-          caption="{{ caption }}"><img src="{{ SITEURL }}/{{ thumb }}"></a>
-        <div class="title">{{ name }}</div>
+      <div class="gallery">
+        {% for name, photo, thumb, exif, caption in gallery %}
+        <a class="figure"
+           href="{{ SITEURL }}/{{ photo }}"
+           title="{{ name }}"
+           exif="{{ exif }}"
+           caption="{{ caption }}">
+          <img src="{{ SITEURL }}/{{ thumb }}">
+          <span class="title">{{ caption }}</span>
+        </a>
+        {% endfor %}
       </div>
       {% endfor %}
-      {% endfor %}
-    </div>
+    </section>
     {% endif %}
   </div><!-- /.entry-content -->
 </article>

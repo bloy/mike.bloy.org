@@ -66,6 +66,8 @@ PHOTO_LIBRARY = "~/web_albums"
 
 PHOTO_EXIF_COPYRIGHT_AUTHOR = 'Mike Bloy'
 PHOTO_EXIF_COPYRIGHT = 'COPYRIGHT'
+PHOTO_RESIZE_JOBS = 4;
+PHOTO_THUMB = (192, 144, 60);
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

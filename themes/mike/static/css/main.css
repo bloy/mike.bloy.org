@@ -658,6 +658,62 @@ article.hentry:first-child > header > h2 {
   margin-top: 0;
 }
 
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap
+}
+
+.gallery a {
+  text-decoration: none;
+  color: #000a06;
+}
+
+.gallery .figure {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border: thin solid rgb(138, 187, 166);
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 1em 1em 0;
+  padding: 0.25em;
+}
+
+.gallery .figure img {
+  border-radius: 0.25rem;
+}
+
+.gallery .figure span.title {
+  font-size: smaller;
+  text-align: center;
+}
+
+@supports(display: grid) {
+  .gallery {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+    grid-auto-rows: minmax(144px, auto);
+    grid-gap: 1em 1em
+  }
+  .gallery > .figure {
+    margin: 0;
+  }
+}
+
 dl.post-info {
   display: block;
   font-size: smaller;
