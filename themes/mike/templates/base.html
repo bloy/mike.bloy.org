@@ -33,6 +33,9 @@
     <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
     {% endif %}
     {% endblock head %}
+    {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR}}/magnific-popup.css">
+    {% endif %}
   </head>
 
   <body>
@@ -70,5 +73,10 @@
       </footer><!-- /#contentinfo -->
     </div>
     <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/antispam.js"></script>
+    {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/jquery.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/jquery.magnific-popup.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/gallery-setup-magnific.js"></script>
+    {% endif %}
   </body>
 </html>
